@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expat Advisor MX - Your Guide to Living in Puerto Vallarta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #D4A853;
+            --dark: #1a1a2e;
+            --darker: #0f0f1a;
+            --light: #f5f5f5;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--dark);
+            color: white;
+            line-height: 1.6;
+        }
+        
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(26,26,46,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover { color: var(--gold); }
+        
+        .nav-cta {
+            background: var(--gold);
+            color: var(--dark);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .nav-cta:hover { transform: scale(1.05); }
+        
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1512813195386-6cf811ad3542?w=1920') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-content h1 span { color: var(--gold); }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: var(--dark);
+        }
+        
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+        
+        .btn:hover { transform: translateY(-3px); }
+        
+        section {
+            padding: 5rem 10%;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title span { color: var(--gold); }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover { transform: translateY(-10px); }
+        
+        .service-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stats {
+            background: var(--darker);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat h2 {
+            font-size: 3rem;
+            color: var(--gold);
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            color: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1rem;
+        }
+        
+        .testimonials {
+            background: var(--darker);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid var(--gold);
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial .author {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, var(--gold), #e67e22);
+            text-align: center;
+            color: var(--dark);
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section .btn {
+            background: var(--dark);
+            color: white;
+            margin-top: 1rem;
+        }
+        
+        footer {
+            background: var(--darker);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        footer a { color: var(--gold); }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            section { padding: 3rem 5%; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">EXPAT ADVISOR MX</div>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-pv">Why PV</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+        <a href="https://app.expatadvisormx.com" class="nav-cta">Try AI Advisor</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your New Life in <span>Paradise</span> Starts Here</h1>
+            <p>Expert relocation services for Americans & Canadians moving to Puerto Vallarta</p>
+            <div class="btn-group">
+                <a href="#contact" class="btn btn-primary">Schedule Free Call</a>
+                <a href="https://app.expatadvisormx.com" class="btn btn-secondary">Try AI Advisor</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title">Our <span>Services</span></h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">🏠</div>
+                <h3>Real Estate</h3>
+                <p>Fideicomiso setup, property search, and purchase guidance for foreign buyers</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">📋</div>
+                <h3>Visa & Immigration</h3>
+                <p>Temporary & permanent residency applications, renewals, and status changes</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🏦</div>
+                <h3>Banking & Finance</h3>
+                <p>Bank account setup, CURP, RFC, and financial planning for expats</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🏥</div>
+                <h3>Healthcare</h3>
+                <p>IMSS enrollment, private insurance options, and medical network access</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">⚖️</div>
+                <h3>Legal Services</h3>
+                <p>Contracts, wills, power of attorney, and legal representation</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">📦</div>
+                <h3>Relocation Support</h3>
+                <p>Moving logistics, settling-in services, and local orientation</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-pv" class="stats">
+        <h2 class="section-title">Why <span>Puerto Vallarta</span></h2>
+        <div class="stats-grid">
+            <div class="stat">
+                <h2>40%</h2>
+                <p>Lower cost of living vs US</p>
+            </div>
+            <div class="stat">
+                <h2>50K+</h2>
+                <p>Expat community</p>
+            </div>
+            <div class="stat">
+                <h2>320</h2>
+                <p>Sunny days per year</p>
+            </div>
+            <div class="stat">
+                <h2>3hr</h2>
+                <p>Flight from major US cities</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="process">
+        <h2 class="section-title">Our <span>Process</span></h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Discovery Call</h3>
+                <p>Free 30-min consultation to understand your goals and timeline</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Custom Plan</h3>
+                <p>Personalized roadmap with clear steps and pricing</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Execution</h3>
+                <p>We handle paperwork, appointments, and coordination</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Welcome Home</h3>
+                <p>Ongoing support as you settle into your new life</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2 class="section-title">What Our <span>Clients</span> Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"They made our visa process completely stress-free. Within 3 months we had our temporary residency and were living our dream."</p>
+                <div class="author">— John & Mary, Seattle</div>
+            </div>
+            <div class="testimonial">
+                <p>"As a remote worker, I needed help with RFC and banking. They handled everything and now I'm legally set up to work from paradise."</p>
+                <div class="author">— Sarah K., Austin</div>
+            </div>
+            <div class="testimonial">
+                <p>"The AI advisor answered my condo questions at 2am. When I needed human help, the team was there. Best of both worlds."</p>
+                <div class="author">— Robert D., Toronto</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta-section">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Book a free discovery call and let's plan your move to Mexico</p>
+        <a href="mailto:hello@expatadvisormx.com" class="btn">Contact Us</a>
+    </section>
+
+    <footer>
+        <p>© 2026 Expat Advisor MX | <a href="https://app.expatadvisormx.com">AI Advisor</a> | Made by <a href="https://duendes.app">duendes.app</a></p>
+    </footer>
+</body>
+</html>
