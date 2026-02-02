@@ -643,37 +643,37 @@
         <div class="services-grid">
             <div class="service-card with-image real-estate" onclick="alert('Real Estate services: Property Purchase & Sale, Bank Trust (Fideicomiso), Power of Attorney, Title Search & Due Diligence. Contact us for a consultation!')">
                 <div class="card-content">
-                    <h3>Real Estate</h3>
-                    <p>Complete legal support for property transactions</p>
-                    <span class="click-hint">Click for details →</span>
+                    <h3><span data-lang-en>Real Estate</span><span data-lang-es>Bienes Raíces</span></h3>
+                    <p><span data-lang-en>Complete legal support for property transactions</span><span data-lang-es>Soporte legal completo para transacciones inmobiliarias</span></p>
+                    <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
                 </div>
             </div>
             <div class="service-card with-image immigration" onclick="alert('Immigration services: Temporary Residency, Permanent Residency, Visa Renewals, Work Permits. Contact us for a consultation!')">
                 <div class="card-content">
-                    <h3>Immigration</h3>
-                    <p>Navigate Mexican residency with confidence</p>
-                    <span class="click-hint">Click for details →</span>
+                    <h3><span data-lang-en>Immigration</span><span data-lang-es>Migración</span></h3>
+                    <p><span data-lang-en>Navigate Mexican residency with confidence</span><span data-lang-es>Navega la residencia mexicana con confianza</span></p>
+                    <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
                 </div>
             </div>
             <div class="service-card with-image condo" onclick="alert('Condo Law services: HOA Regulations, Condo Regime Setup, Owner Disputes, Assembly Procedures. Contact us for a consultation!')">
                 <div class="card-content">
-                    <h3>Condo Law</h3>
-                    <p>Expert guidance on condominium regulations</p>
-                    <span class="click-hint">Click for details →</span>
+                    <h3><span data-lang-en>Condo Law</span><span data-lang-es>Régimen de Condominio</span></h3>
+                    <p><span data-lang-en>Expert guidance on condominium regulations</span><span data-lang-es>Asesoría experta en regulaciones de condominio</span></p>
+                    <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
                 </div>
             </div>
             <div class="service-card with-image wills" onclick="alert('Wills & Estate services: Mexican Wills, Estate Planning, Probate Process, Asset Protection. Contact us for a consultation!')">
                 <div class="card-content">
-                    <h3>Wills & Estate</h3>
-                    <p>Protect your assets and family's future</p>
-                    <span class="click-hint">Click for details →</span>
+                    <h3><span data-lang-en>Wills & Estate</span><span data-lang-es>Testamentos y Herencias</span></h3>
+                    <p><span data-lang-en>Protect your assets and family's future</span><span data-lang-es>Protege tus activos y el futuro de tu familia</span></p>
+                    <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
                 </div>
             </div>
             <div class="service-card with-image property-management" onclick="alert('Property Management services: Rental Management, Tenant Screening, Lease Agreements, Property Oversight. Contact us for a consultation!')">
                 <div class="card-content">
-                    <h3>Property Management</h3>
-                    <p>Professional oversight of your investment</p>
-                    <span class="click-hint">Click for details →</span>
+                    <h3><span data-lang-en>Property Management</span><span data-lang-es>Administración de Propiedades</span></h3>
+                    <p><span data-lang-en>Professional oversight of your investment</span><span data-lang-es>Supervisión profesional de tu inversión</span></p>
+                    <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
                 </div>
             </div>
         </div>
@@ -746,11 +746,13 @@
         <h2 class="section-title" data-lang-en>Client <span>Testimonials</span></h2><h2 class="section-title" data-lang-es><span>Testimonios</span> de Clientes</h2>
         <div class="testimonial-grid">
             <div class="testimonial">
-                <p>"Buying property in Mexico seemed overwhelming until we found this team. They explained the fideicomiso process clearly and handled everything professionally."</p>
+                <p data-lang-en>"Buying property in Mexico seemed overwhelming until we found this team. They explained the fideicomiso process clearly and handled everything professionally."</p>
+                <p data-lang-es>"Comprar propiedad en México parecía abrumador hasta que encontramos este equipo. Nos explicaron el proceso de fideicomiso claramente y manejaron todo profesionalmente."</p>
                 <div class="author">— Michael & Susan, California</div>
             </div>
             <div class="testimonial">
-                <p>"After a nightmare experience with another firm, these guys restored my faith. My condo dispute was resolved and I finally have peace of mind."</p>
+                <p data-lang-en>"After a nightmare experience with another firm, these guys restored my faith. My condo dispute was resolved and I finally have peace of mind."</p>
+                <p data-lang-es>"Después de una experiencia de pesadilla con otra firma, estos tipos restauraron mi fe. Mi disputa de condominio se resolvió y finalmente tengo paz mental."</p>
                 <div class="author">— David R., Texas</div>
             </div>
             <div class="testimonial">
@@ -776,9 +778,9 @@
                         <input type="email" id="email" name="email" required placeholder="john@example.com">
                     </div>
                     <div class="form-group">
-                        <label for="service">Service Needed</label>
+                        <label for="service"><span data-lang-en>Service Needed</span><span data-lang-es>Servicio Requerido</span></label>
                         <select id="service" name="service">
-                            <option value="">Select a service...</option>
+                            <option value="" data-lang-en>Select a service...</option><option value="" data-lang-es style="display:none">Selecciona un servicio...</option>
                             <option value="Real Estate">Real Estate / Fideicomiso</option>
                             <option value="Immigration">Immigration / Residency</option>
                             <option value="Condo Law">Condo Law / HOA</option>
@@ -791,7 +793,7 @@
                         <label for="message">Your Message *</label>
                         <textarea id="message" name="message" required placeholder="Tell us about your situation..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+                    <button type="submit" class="btn btn-primary" style="width:100%;"><span data-lang-en>Send Message</span><span data-lang-es>Enviar Mensaje</span></button>
                 </form>
             </div>
             <div class="contact-info">
@@ -807,14 +809,14 @@
                 <div class="contact-item">
                     <span class="icon">✉️</span>
                     <div>
-                        <strong>Email</strong><br>
+                        <strong><span data-lang-en>Email</span><span data-lang-es>Correo</span></strong><br>
                         <a href="mailto:pvrolomx@yahoo.com.mx">pvrolomx@yahoo.com.mx</a>
                     </div>
                 </div>
                 <div class="contact-item">
                     <span class="icon">📍</span>
                     <div>
-                        <strong>Location</strong><br>
+                        <strong><span data-lang-en>Location</span><span data-lang-es>Ubicación</span></strong><br>
                         Puerto Vallarta, Jalisco<br>
                         Bahía de Banderas, Nayarit
                     </div>
@@ -822,7 +824,7 @@
                 <div class="contact-item">
                     <span class="icon">🤖</span>
                     <div>
-                        <strong>AI Assistant</strong><br>
+                        <strong><span data-lang-en>AI Assistant</span><span data-lang-es>Asistente AI</span></strong><br>
                         <a href="https://app.expatadvisormx.com">Get instant answers 24/7</a><br>
                         <small>For general information</small>
                     </div>
