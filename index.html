@@ -470,6 +470,83 @@
             margin-bottom: 1.5rem;
         }
 
+        
+        /* Image Cards */
+        .service-card.with-image {
+            background: none !important;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card.with-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            transition: transform 0.5s;
+        }
+
+        .service-card.with-image:hover::before {
+            transform: scale(1.1);
+        }
+
+        .service-card.with-image::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.2) 100%);
+            z-index: 1;
+        }
+
+        .service-card.with-image .card-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card.with-image .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card.with-image h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .service-card.with-image p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .service-card.with-image ul {
+            display: none;
+        }
+
+        .service-card.real-estate::before {
+            background-image: url("real-estate.png");
+        }
+
+        .click-hint {
+            font-size: 0.75rem;
+            color: var(--gold);
+            margin-top: 0.5rem;
+            opacity: 0.8;
+        }
+
+
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2rem; }
             .nav-links { display: none; }
@@ -506,16 +583,13 @@
     <section id="services">
         <h2 class="section-title">Legal <span>Services</span></h2>
         <div class="services-grid">
-            <div class="service-card">
-                <div class="icon">🏠</div>
-                <h3>Real Estate</h3>
-                <p>Complete legal support for property transactions</p>
-                <ul>
-                    <li>Property Purchase & Sale</li>
-                    <li>Bank Trust (Fideicomiso)</li>
-                    <li>Power of Attorney</li>
-                    <li>Title Search & Due Diligence</li>
-                </ul>
+            <div class="service-card with-image real-estate" onclick="alert('Real Estate services: Property Purchase & Sale, Bank Trust (Fideicomiso), Power of Attorney, Title Search & Due Diligence. Contact us for a consultation!')">
+                <div class="card-content">
+                    <div class="icon">🏠</div>
+                    <h3>Real Estate</h3>
+                    <p>Complete legal support for property transactions</p>
+                    <span class="click-hint">Click for details →</span>
+                </div>
             </div>
             <div class="service-card">
                 <div class="icon">🛂</div>
