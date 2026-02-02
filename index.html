@@ -563,6 +563,41 @@
         }
 
 
+        
+        /* Language Toggle */
+        .lang-toggle {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .lang-toggle button {
+            background: transparent;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.3s;
+            padding: 0.3rem;
+        }
+
+        .lang-toggle button.active {
+            opacity: 1;
+        }
+
+        .lang-toggle button:hover {
+            opacity: 0.8;
+        }
+
+        [data-lang-es] { display: none; }
+        body.lang-es [data-lang-es] { display: block; }
+        body.lang-es [data-lang-en] { display: none; }
+        body.lang-es span[data-lang-es] { display: inline; }
+        body.lang-es span[data-lang-en] { display: none; }
+        span[data-lang-en] { display: inline; }
+        span[data-lang-es] { display: none; }
+
+
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2rem; }
             .nav-links { display: none; }
@@ -581,23 +616,30 @@
             <li><a href="#process">Process</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="https://app.expatadvisormx.com" class="nav-cta">AI Assistant</a>
+        <div class="lang-toggle">
+            <button onclick="setLang('en')" id="btn-en" class="active">🇺🇸</button>
+            <button onclick="setLang('es')" id="btn-es">🇲🇽</button>
+        </div>
+        <a href="https://app.expatadvisormx.com" class="nav-cta"><span data-lang-en>AI Assistant</span><span data-lang-es>Asistente AI</span></a>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Legal Services for <span>Expats</span> in Mexico</h1>
-            <p>Real Estate • Immigration • Condo Law • Wills • Property Management</p>
-            <p class="subtitle">20+ Years Experience in Puerto Vallarta & Bahía de Banderas</p>
+            <h1 data-lang-en>Legal Services for <span>Expats</span> in Mexico</h1>
+            <h1 data-lang-es>Servicios Legales para <span>Expats</span> en México</h1>
+            <p data-lang-en>Real Estate • Immigration • Condo Law • Wills • Property Management</p>
+            <p data-lang-es>Inmobiliaria • Migración • Condominio • Testamentos • Administración</p>
+            <p class="subtitle" data-lang-en>20+ Years Experience in Puerto Vallarta & Bahía de Banderas</p>
+            <p class="subtitle" data-lang-es>20+ Años de Experiencia en Puerto Vallarta y Bahía de Banderas</p>
             <div class="btn-group">
-                <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                <a href="#contact" class="btn btn-primary"><span data-lang-en>Schedule Consultation</span><span data-lang-es>Agendar Consulta</span></a>
                 <a href="https://wa.me/523221110294" class="btn btn-whatsapp">💬 WhatsApp</a>
             </div>
         </div>
     </section>
 
     <section id="services">
-        <h2 class="section-title">Legal <span>Services</span></h2>
+        <h2 class="section-title" data-lang-en>Legal <span>Services</span></h2><h2 class="section-title" data-lang-es>Servicios <span>Legales</span></h2>
         <div class="services-grid">
             <div class="service-card with-image real-estate" onclick="alert('Real Estate services: Property Purchase & Sale, Bank Trust (Fideicomiso), Power of Attorney, Title Search & Due Diligence. Contact us for a consultation!')">
                 <div class="card-content">
@@ -638,7 +680,7 @@
     </section>
 
     <section id="about" class="about">
-        <h2 class="section-title">Why <span>Choose Us</span></h2>
+        <h2 class="section-title" data-lang-en>Why <span>Choose Us</span></h2><h2 class="section-title" data-lang-es>Por Qué <span>Elegirnos</span></h2>
         <div class="about-content">
             <div class="about-text">
                 <h3>Two Decades of Expat Legal Experience</h3>
@@ -675,7 +717,7 @@
     </section>
 
     <section id="process">
-        <h2 class="section-title">How We <span>Work</span></h2>
+        <h2 class="section-title" data-lang-en>How We <span>Work</span></h2><h2 class="section-title" data-lang-es>Cómo <span>Trabajamos</span></h2>
         <div class="process-steps">
             <div class="step">
                 <div class="step-number">1</div>
@@ -701,7 +743,7 @@
     </section>
 
     <section id="testimonials" class="testimonials">
-        <h2 class="section-title">Client <span>Testimonials</span></h2>
+        <h2 class="section-title" data-lang-en>Client <span>Testimonials</span></h2><h2 class="section-title" data-lang-es><span>Testimonios</span> de Clientes</h2>
         <div class="testimonial-grid">
             <div class="testimonial">
                 <p>"Buying property in Mexico seemed overwhelming until we found this team. They explained the fideicomiso process clearly and handled everything professionally."</p>
@@ -719,7 +761,7 @@
     </section>
 
     <section id="contact" class="contact-section">
-        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <h2 class="section-title" data-lang-en>Get In <span>Touch</span></h2><h2 class="section-title" data-lang-es><span>Contáctanos</span></h2>
         <div class="contact-grid">
             <div class="contact-form">
                 <h3>Send Us a Message</h3>
@@ -858,6 +900,23 @@
             submitBtn.disabled = false;
             submitBtn.textContent = 'Send Message';
         });
+    </script>
+
+    <script>
+        function setLang(lang) {
+            if (lang === 'es') {
+                document.body.classList.add('lang-es');
+            } else {
+                document.body.classList.remove('lang-es');
+            }
+            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+            localStorage.setItem('expatadvisor-lang', lang);
+        }
+
+        // Check saved preference
+        const savedLang = localStorage.getItem('expatadvisor-lang');
+        if (savedLang) setLang(savedLang);
     </script>
 </body>
 </html>
