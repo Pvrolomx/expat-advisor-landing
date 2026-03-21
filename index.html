@@ -1170,6 +1170,21 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js');
         }
+
+        // Page visit tracker
+        (function() {
+            try {
+                fetch('https://email-service-two-hazel.vercel.app/api/track', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        page: window.location.pathname,
+                        referrer: document.referrer || null,
+                        lang: localStorage.getItem('expatadvisor-lang') || navigator.language || null
+                    })
+                }).catch(() => {});
+            } catch(e) {}
+        })();
     </script>
 </body>
 </html>
