@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expat Advisor MX - Legal Services for Expats in Puerto Vallarta</title>
     <meta name="description" content="20+ years helping expats with real estate, immigration, condo law, wills and property management in Puerto Vallarta & Bahía de Banderas">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#D4A853">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -66,7 +68,13 @@
             font-weight: 600;
             text-decoration: none;
             transition: transform 0.3s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
         }
+        
+        .hidden { display: none !important; }
         
         .nav-cta:hover { transform: scale(1.05); }
         
@@ -724,7 +732,7 @@
             <button onclick="setLang('en')" id="btn-en" class="active">🇺🇸</button>
             <button onclick="setLang('es')" id="btn-es">🇲🇽</button>
         </div>
-        <a href="https://app.expatadvisormx.com" class="nav-cta"><span data-lang-en>AI Assistant</span><span data-lang-es>Asistente AI</span></a>
+        <button id="install-btn" class="nav-cta hidden" onclick="installApp()"><span data-lang-en>📲 Install App</span><span data-lang-es>📲 Instalar App</span></button>
     </nav>
 
     <section class="hero">
@@ -1144,6 +1152,32 @@
         // Check saved preference
         const savedLang = localStorage.getItem('expatadvisor-lang');
         if (savedLang) setLang(savedLang);
+
+        // PWA Install - beforeinstallprompt per RDE
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            document.getElementById('install-btn').classList.remove('hidden');
+        });
+
+        function installApp() {
+            if (!deferredPrompt) return;
+            deferredPrompt.prompt();
+            deferredPrompt.userChoice.then(r => {
+                if (r.outcome === 'accepted') document.getElementById('install-btn').classList.add('hidden');
+                deferredPrompt = null;
+            });
+        }
+
+        window.addEventListener('appinstalled', () => {
+            document.getElementById('install-btn').classList.add('hidden');
+        });
+
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
+        }
     </script>
 </body>
 </html>
