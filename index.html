@@ -416,6 +416,110 @@
         
         footer a { color: var(--gold); }
         
+        /* Service Detail Modal */
+        .service-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .service-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .service-modal {
+            background: var(--dark);
+            border-radius: 16px;
+            max-width: 480px;
+            width: 90%;
+            margin: 1rem;
+            border: 1px solid rgba(212,168,83,0.3);
+            transform: scale(0.9) translateY(20px);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .service-modal-overlay.active .service-modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .service-modal-header {
+            padding: 2rem 2rem 1rem;
+            text-align: center;
+        }
+
+        .service-modal-header .sm-icon {
+            font-size: 3rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-modal-header h3 {
+            color: var(--gold);
+            font-size: 1.4rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .service-modal-body {
+            padding: 0 2rem 1.5rem;
+        }
+
+        .service-modal-body ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .service-modal-body ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        .service-modal-body ul li::before {
+            content: '✓ ';
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .service-modal-footer {
+            padding: 1rem 2rem 2rem;
+            display: flex;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+
+        .service-modal-footer .btn {
+            font-size: 0.9rem;
+            padding: 0.7rem 1.5rem;
+        }
+
+        .btn-ghost {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .btn-ghost:hover {
+            border-color: rgba(255,255,255,0.5);
+        }
+
         /* Success Modal */
         .modal-overlay {
             position: fixed;
@@ -641,28 +745,28 @@
     <section id="services">
         <h2 class="section-title" data-lang-en>Legal <span>Services</span></h2><h2 class="section-title" data-lang-es>Servicios <span>Legales</span></h2>
         <div class="services-grid">
-            <div class="service-card with-image real-estate" onclick="alert('We coordinate your entire transaction from start to finish: bank trust (fideicomiso) setup & management, notary & trustee liaison, title search & due diligence, private contracts & escrow, powers of attorney, and closing coordination. You deal with us — we deal with everyone else.')">
+            <div class="service-card with-image real-estate" onclick="showServiceModal('real-estate')">
                 <div class="card-content">
                     <h3><span data-lang-en>Real Estate</span><span data-lang-es>Bienes Raíces</span></h3>
                     <p><span data-lang-en>Your single point of contact for buying, selling & protecting property in Mexico</span><span data-lang-es>Tu único punto de contacto para comprar, vender y proteger propiedad en México</span></p>
                     <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
                 </div>
             </div>
-            <div class="service-card with-image immigration" onclick="alert('We handle your immigration process directly before INM (Instituto Nacional de Migración): temporary & permanent residency applications, visa renewals & status changes, work permits, and document preparation. No middlemen — we file and follow up on your behalf.')">
+            <div class="service-card with-image immigration" onclick="showServiceModal('immigration')">
                 <div class="card-content">
                     <h3><span data-lang-en>Immigration</span><span data-lang-es>Migración</span></h3>
                     <p><span data-lang-en>Direct representation before INM for residency, visas & work permits</span><span data-lang-es>Representación directa ante INM para residencia, visas y permisos de trabajo</span></p>
                     <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
                 </div>
             </div>
-            <div class="service-card with-image condo" onclick="alert('We advise condo owners and HOA boards on their rights and obligations under Mexican condominium law: interpreting condo bylaws & regulations, guidance on assembly procedures & voting rights, HOA compliance & governance, and owner rights protection. Clear answers to keep your community running smoothly.')">
+            <div class="service-card with-image condo" onclick="showServiceModal('condo')">
                 <div class="card-content">
                     <h3><span data-lang-en>Condo Law</span><span data-lang-es>Régimen de Condominio</span></h3>
                     <p><span data-lang-en>Know your rights and obligations as a condo owner or HOA board member</span><span data-lang-es>Conoce tus derechos y obligaciones como condómino o miembro de la mesa directiva</span></p>
                     <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
                 </div>
             </div>
-            <div class="service-card with-image wills" onclick="alert('We coordinate your Mexican will with a notary public and handle the succession process when the time comes. For straightforward successions (all heirs of legal age, no disputes), we manage the entire notarial probate process. Cases involving minors or disputes are referred to trusted litigation colleagues.')">
+            <div class="service-card with-image wills" onclick="showServiceModal('wills')">
                 <div class="card-content">
                     <h3><span data-lang-en>Wills & Succession</span><span data-lang-es>Testamentos y Sucesiones</span></h3>
                     <p><span data-lang-en>Secure your legacy — from drafting your will to executing the succession</span><span data-lang-es>Asegura tu legado — desde redactar tu testamento hasta ejecutar la sucesión</span></p>
@@ -838,6 +942,23 @@
         <p style="margin-top:0.5rem; font-size:0.8rem; opacity:0.7;">Puerto Vallarta, Jalisco & Bahía de Banderas, Nayarit</p>
     </footer>
 
+    <!-- Service Detail Modal -->
+    <div id="service-modal" class="service-modal-overlay" onclick="if(event.target===this)closeServiceModal()">
+        <div class="service-modal">
+            <div class="service-modal-header">
+                <div class="sm-icon" id="sm-icon"></div>
+                <h3 id="sm-title"></h3>
+            </div>
+            <div class="service-modal-body">
+                <ul id="sm-list"></ul>
+            </div>
+            <div class="service-modal-footer">
+                <a href="#contact" class="btn btn-primary" onclick="closeServiceModal()"><span data-lang-en>Get a Consultation</span><span data-lang-es>Solicitar Consulta</span></a>
+                <button class="btn-ghost" onclick="closeServiceModal()"><span data-lang-en>Close</span><span data-lang-es>Cerrar</span></button>
+            </div>
+        </div>
+    </div>
+
     <!-- Success Modal -->
     <div id="success-modal" class="modal-overlay">
         <div class="modal-content">
@@ -849,6 +970,110 @@
     </div>
 
     <script>
+        const serviceData = {
+            'real-estate': {
+                icon: '🏠',
+                title: { en: 'Real Estate', es: 'Bienes Raíces' },
+                items: {
+                    en: [
+                        'Bank trust (fideicomiso) setup & management',
+                        'Notary & trustee liaison',
+                        'Title search & due diligence',
+                        'Private contracts & escrow',
+                        'Powers of attorney',
+                        'Closing coordination',
+                        'You deal with us — we deal with everyone else'
+                    ],
+                    es: [
+                        'Constitución y gestión de fideicomiso',
+                        'Enlace con notarios y fiduciarios',
+                        'Búsqueda de título y due diligence',
+                        'Contratos privados y escrow',
+                        'Poderes notariales',
+                        'Coordinación de cierre',
+                        'Tú tratas con nosotros — nosotros con todos los demás'
+                    ]
+                }
+            },
+            'immigration': {
+                icon: '✈️',
+                title: { en: 'Immigration', es: 'Migración' },
+                items: {
+                    en: [
+                        'Temporary residency applications',
+                        'Permanent residency applications',
+                        'Visa renewals & status changes',
+                        'Work permits',
+                        'Document preparation & filing',
+                        'Direct representation before INM — no middlemen'
+                    ],
+                    es: [
+                        'Solicitudes de residencia temporal',
+                        'Solicitudes de residencia permanente',
+                        'Renovaciones y cambios de estatus',
+                        'Permisos de trabajo',
+                        'Preparación y presentación de documentos',
+                        'Representación directa ante INM — sin intermediarios'
+                    ]
+                }
+            },
+            'condo': {
+                icon: '🏢',
+                title: { en: 'Condo Law', es: 'Régimen de Condominio' },
+                items: {
+                    en: [
+                        'Interpreting condo bylaws & regulations',
+                        'Assembly procedures & voting rights',
+                        'HOA compliance & governance',
+                        'Owner rights protection',
+                        'Clear answers to keep your community running smoothly'
+                    ],
+                    es: [
+                        'Interpretación de reglamentos condominales',
+                        'Procedimientos de asamblea y derechos de voto',
+                        'Cumplimiento y gobernanza de la administración',
+                        'Protección de derechos de condóminos',
+                        'Respuestas claras para que tu comunidad funcione bien'
+                    ]
+                }
+            },
+            'wills': {
+                icon: '📜',
+                title: { en: 'Wills & Succession', es: 'Testamentos y Sucesiones' },
+                items: {
+                    en: [
+                        'Mexican will drafting coordinated with notary public',
+                        'Notarial succession process management',
+                        'Heir coordination & documentation',
+                        'Trust & property transfer guidance',
+                        'Complex cases (minors, disputes) referred to trusted litigation colleagues'
+                    ],
+                    es: [
+                        'Redacción de testamento coordinada con notario público',
+                        'Gestión del proceso de sucesión notarial',
+                        'Coordinación de herederos y documentación',
+                        'Orientación en transferencia de fideicomisos y propiedades',
+                        'Casos complejos (menores, disputas) referidos a colegas litigantes de confianza'
+                    ]
+                }
+            }
+        };
+
+        function showServiceModal(id) {
+            const data = serviceData[id];
+            if (!data) return;
+            const lang = localStorage.getItem('lang') || 'en';
+            document.getElementById('sm-icon').textContent = data.icon;
+            document.getElementById('sm-title').textContent = data.title[lang];
+            const list = document.getElementById('sm-list');
+            list.innerHTML = data.items[lang].map(item => '<li>' + item + '</li>').join('');
+            document.getElementById('service-modal').classList.add('active');
+        }
+
+        function closeServiceModal() {
+            document.getElementById('service-modal').classList.remove('active');
+        }
+
         function closeModal() {
             document.getElementById('success-modal').classList.remove('active');
         }
