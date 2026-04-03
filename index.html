@@ -967,12 +967,18 @@
     </div>
 
     <!-- Success Modal -->
-    <div id="success-modal" class="modal-overlay">
-        <div class="modal-content">
-            <div class="modal-icon">✅</div>
-            <h3 class="modal-title">Message Sent!</h3>
-            <p class="modal-text">Thank you for reaching out. We will get back to you within 24 hours.</p>
-            <button onclick="closeModal()" class="btn btn-primary">Got it</button>
+    <div id="success-modal" class="modal-overlay" onclick="if(event.target===this)closeModal()">
+        <div class="modal-content" style="max-width: 440px; text-align: left;">
+            <div class="modal-icon" style="text-align: center;">✅</div>
+            <h3 class="modal-title" style="text-align: center;"><span data-lang-en>Message Received!</span><span data-lang-es>¡Mensaje Recibido!</span></h3>
+            <p class="modal-text"><span data-lang-en>Thank you for reaching out to Expat Advisor MX. We've received your message and will get back to you within 24 hours.</span><span data-lang-es>Gracias por contactar a Expat Advisor MX. Hemos recibido tu mensaje y te responderemos en las próximas 24 horas.</span></p>
+            <p class="modal-text" style="font-size: 0.9rem;"><span data-lang-en>If your matter is urgent, feel free to reach us directly:</span><span data-lang-es>Si tu asunto es urgente, contáctanos directamente:</span></p>
+            <div style="display: flex; gap: 0.75rem; margin-bottom: 1.5rem;">
+                <a href="https://wa.me/523221110294" class="btn btn-whatsapp" style="flex: 1; text-align: center; font-size: 0.9rem;">💬 WhatsApp</a>
+                <a href="tel:+523221110294" class="btn btn-primary" style="flex: 1; text-align: center; font-size: 0.9rem;">📞 <span data-lang-en>Call Us</span><span data-lang-es>Llámanos</span></a>
+            </div>
+            <p style="font-size: 0.8rem; opacity: 0.6; text-align: center; margin: 0;"><span data-lang-en>— Rolo, Expat Advisor MX</span><span data-lang-es>— Rolo, Expat Advisor MX</span></p>
+            <button onclick="closeModal()" class="btn btn-primary" style="width: 100%; margin-top: 1rem;"><span data-lang-en>Got it</span><span data-lang-es>Entendido</span></button>
         </div>
     </div>
 
