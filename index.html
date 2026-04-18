@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BCWJ1HTPY8"></script>
@@ -725,6 +725,104 @@
             .contact-grid { grid-template-columns: 1fr; }
         }
     </style>
+    <!-- Schema Markup: LegalService + FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LegalService",
+          "@id": "https://expatadvisormx.com/#legalservice",
+          "name": "Expat Advisor MX",
+          "url": "https://expatadvisormx.com",
+          "logo": "https://expatadvisormx.com/icon-192.png",
+          "description": "Legal services for expats in Puerto Vallarta and Riviera Nayarit. Specializing in real estate (fideicomiso), immigration, condo law, wills, and property management for Americans and Canadians. 20+ years of experience. Bilingual English/Spanish.",
+          "telephone": "+52-322-111-0294",
+          "email": "advisor@expatadvisormx.com",
+          "areaServed": [
+            { "@type": "City", "name": "Puerto Vallarta", "containedInPlace": { "@type": "State", "name": "Jalisco", "containedInPlace": { "@type": "Country", "name": "Mexico" } } },
+            { "@type": "City", "name": "Bahia de Banderas", "containedInPlace": { "@type": "State", "name": "Nayarit", "containedInPlace": { "@type": "Country", "name": "Mexico" } } },
+            { "@type": "AdministrativeArea", "name": "Riviera Nayarit" },
+            { "@type": "City", "name": "Bucerias" },
+            { "@type": "City", "name": "Sayulita" },
+            { "@type": "City", "name": "Nuevo Vallarta" }
+          ],
+          "serviceType": [
+            "Real Estate Law",
+            "Fideicomiso",
+            "Immigration Law",
+            "Condo Law",
+            "Wills and Succession",
+            "Property Management"
+          ],
+          "priceRange": "$",
+          "currenciesAccepted": "USD, MXN",
+          "openingHours": "Mo-Fr 09:00-18:00",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Legal Services for Expats",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Real Estate & Fideicomiso", "description": "Bank trust setup, title search, notary liaison, closing coordination for foreign buyers in Mexico" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Immigration & Residency", "description": "Temporary and permanent residency applications, visa renewals, work permits, INM representation" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Condo Law", "description": "HOA governance, condo bylaws interpretation, owner rights protection in Puerto Vallarta and Riviera Nayarit" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wills & Succession", "description": "Mexican will drafting, notarial succession, estate planning for foreign nationals" } }
+            ]
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Rolando Romero Garcia",
+            "jobTitle": "Attorney / Expat Legal Advisor",
+            "hasCredential": {
+              "@type": "EducationalOccupationalCredential",
+              "credentialCategory": "Professional License",
+              "name": "Cedula Profesional No. 5255863",
+              "recognizedBy": { "@type": "Organization", "name": "Secretaria de Educacion Publica, Direccion General de Profesiones" }
+            },
+            "knowsLanguage": ["es", "en"],
+            "worksFor": { "@id": "https://expatadvisormx.com/#legalservice" }
+          },
+          "sameAs": [
+            "https://expatadvisormx.com"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can a foreigner buy property in Puerto Vallarta?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. Foreigners can buy property in Puerto Vallarta and Riviera Nayarit through a bank trust called a fideicomiso, which is a legal structure authorized by Mexican law that allows non-Mexicans to hold title to property within the restricted zone (50km from the coast). We handle the entire process." }
+            },
+            {
+              "@type": "Question",
+              "name": "What is a fideicomiso and how does it work in Mexico?",
+              "acceptedAnswer": { "@type": "Answer", "text": "A fideicomiso is a Mexican bank trust that allows foreign nationals to legally own real estate within 50km of the coast or 100km of international borders. A Mexican bank acts as trustee while the foreign buyer holds all rights of use, enjoyment, and sale. The trust is typically set up for 50 years and is renewable." }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I get temporary or permanent residency in Mexico?",
+              "acceptedAnswer": { "@type": "Answer", "text": "To obtain Mexican residency, you must apply through INM (Instituto Nacional de Migracion). Temporary residency (Residente Temporal) can be obtained through financial solvency, employment, or family ties. After 4 years it can be converted to permanent residency. We provide direct representation before INM in Puerto Vallarta and Bahia de Banderas." }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need a Mexican will if I own property in Mexico?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Yes. If you own property in Mexico, a Mexican will is strongly recommended. A foreign will is generally not recognized for Mexican assets. A Mexican notarial will ensures your property passes to your heirs efficiently and avoids costly succession procedures. We coordinate the process with a trusted notary public." }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the HOA rules for condos in Puerto Vallarta?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Condominiums in Puerto Vallarta and Riviera Nayarit are governed by the Ley de Propiedad en Condominio. Each development has its own reglamento (bylaws) that governs maintenance fees, assembly voting rights, use of common areas, and board governance. We advise both individual owners and HOA boards on their rights and obligations." }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a fideicomiso cost in Mexico?",
+              "acceptedAnswer": { "@type": "Answer", "text": "A fideicomiso typically costs between $500 and $1,000 USD to set up, plus annual trustee fees ranging from $500 to $700 USD per year depending on the bank. Additional costs include notary fees, ISAI (acquisition tax), and registration. We provide transparent fee breakdowns before any transaction." }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <nav>
