@@ -12,22 +12,26 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0f1923;color:#f0ede6;line-height:1.7}
-header{background:#0f1923;border-bottom:1px solid rgba(201,168,76,0.2);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem}
-header a.logo-link{text-decoration:none}
-header nav{display:block;white-space:nowrap}
-header nav a{color:#f0ede6;text-decoration:none;display:inline-block;margin-left:1.2rem;font-size:0.95rem;opacity:0.8;transition:opacity 0.2s;vertical-align:middle}
-header nav a:hover{opacity:1;color:#c9a84c}
-.lang-toggle{display:inline-flex;align-items:center;gap:0.4rem;margin-left:1.2rem;vertical-align:middle}
-.lang-btn{background:transparent;border:1px solid rgba(201,168,76,0.3);color:rgba(240,237,230,0.6);padding:0.25rem 0.65rem;border-radius:4px;cursor:pointer;font-size:0.85rem;font-family:inherit;transition:all 0.2s}
+
+/* ── HEADER: two-row layout, no flex on the nav ── */
+header{background:#0f1923;border-bottom:1px solid rgba(201,168,76,0.2)}
+.header-top{padding:0.75rem 1.5rem;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.header-nav{padding:0.4rem 1.5rem 0.6rem;text-align:center;border-top:1px solid rgba(201,168,76,0.08)}
+.header-nav a{color:#f0ede6;text-decoration:none;display:inline-block;margin:0 0.6rem;font-size:0.9rem;opacity:0.85}
+.header-nav a:hover{opacity:1;color:#c9a84c}
+.header-nav a.active-page{color:#c9a84c}
+.lang-toggle{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:0.35rem}
+.lang-btn{background:transparent;border:1px solid rgba(201,168,76,0.3);color:rgba(240,237,230,0.6);padding:0.22rem 0.6rem;border-radius:4px;cursor:pointer;font-size:0.82rem;font-family:inherit;transition:all 0.2s}
 .lang-btn.active{background:#c9a84c;color:#0f1923;border-color:#c9a84c;font-weight:600}
-.hero{background:linear-gradient(135deg,#0f1923 0%,#1a2a3a 100%);padding:4rem 2rem 3rem;text-align:center;border-bottom:1px solid rgba(201,168,76,0.15)}
-.hero h1{font-size:2.2rem;font-weight:700;color:#f0ede6;margin-bottom:0.75rem}
+
+.hero{background:-webkit-linear-gradient(315deg,#0f1923 0%,#1a2a3a 100%);background:linear-gradient(135deg,#0f1923 0%,#1a2a3a 100%);padding:3.5rem 1.5rem 2.5rem;text-align:center;border-bottom:1px solid rgba(201,168,76,0.15)}
+.hero h1{font-size:2rem;font-weight:700;color:#f0ede6;margin-bottom:0.75rem}
 .hero h1 span{color:#c9a84c}
-.hero p{color:rgba(240,237,230,0.7);font-size:1.05rem;max-width:600px;margin:0 auto}
-.container{max-width:900px;margin:0 auto;padding:3rem 2rem}
+.hero p{color:rgba(240,237,230,0.7);font-size:1rem;max-width:600px;margin:0 auto}
+.container{max-width:900px;margin:0 auto;padding:3rem 1.5rem}
 .post-card{background:rgba(255,255,255,0.04);border:1px solid rgba(201,168,76,0.15);border-radius:12px;overflow:hidden;margin-bottom:2rem;transition:border-color 0.2s}
 .post-card:hover{border-color:rgba(201,168,76,0.4)}
-.post-card img{width:100%;height:220px;object-fit:cover}
+.post-card img{width:100%;height:220px;-o-object-fit:cover;object-fit:cover}
 .post-card-body{padding:1.75rem}
 .post-tag{display:inline-block;background:rgba(201,168,76,0.15);color:#c9a84c;font-size:0.78rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:0.3rem 0.75rem;border-radius:4px;margin-bottom:0.9rem}
 .post-card h2{font-size:1.35rem;font-weight:700;color:#f0ede6;margin-bottom:0.6rem;line-height:1.4}
@@ -36,17 +40,18 @@ header nav a:hover{opacity:1;color:#c9a84c}
 .btn-read{display:inline-block;background:#c9a84c;color:#0f1923;padding:0.6rem 1.4rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:0.9rem;transition:background 0.2s}
 .btn-read:hover{background:#e0bf68}
 footer{text-align:center;padding:2rem;color:rgba(240,237,230,0.35);font-size:0.85rem;border-top:1px solid rgba(201,168,76,0.1)}
-[data-lang-es]{display:none}
-body.lang-es [data-lang-en]{display:none}
-body.lang-es [data-lang-es]{display:revert}
-@media(max-width:768px){
-  header{padding:0.75rem 1rem;flex-direction:column;gap:0.5rem;align-items:center}
-  header a.logo,header a.logo-link{display:block}
-  header nav{width:100%;display:block;text-align:center;line-height:2.2}
-  header nav a{display:inline-block;margin:0 0.35rem;padding:0.25rem 0.15rem;font-size:0.88rem;opacity:1;vertical-align:middle}
-  .lang-toggle{display:inline-flex;align-items:center;gap:0.3rem;margin-left:0.35rem;vertical-align:middle}
-  .lang-btn{padding:0.2rem 0.5rem;font-size:0.8rem}
-  .hero h1{font-size:1.6rem}
+
+/* Lang switching: JS adds/removes class on body */
+.es{display:none}
+body.lang-es .en{display:none}
+body.lang-es .es{display:inline}
+body.lang-es .es-block{display:block}
+
+@media(max-width:600px){
+  .header-top{padding:0.65rem 1rem}
+  .header-nav{padding:0.35rem 0.75rem 0.5rem}
+  .header-nav a{margin:0 0.4rem;font-size:0.85rem}
+  .hero h1{font-size:1.55rem}
   .hero{padding:2.5rem 1rem 2rem}
   .container{padding:2rem 1rem}
   .post-card img{height:180px}
@@ -57,26 +62,24 @@ body.lang-es [data-lang-es]{display:revert}
 </head>
 <body>
 <header>
-  <a href="/" class="logo-link"><img src="/logo_banner.png" alt="Expat Advisor MX" style="height:36px;"></a>
-  <nav>
-    <a href="/#services" data-lang-en>Services</a>
-    <a href="/#services" data-lang-es>Servicios</a>
-    <a href="/#contact" data-lang-en>Contact</a>
-    <a href="/#contact" data-lang-es>Contacto</a>
-    <a href="/blog/" data-lang-en style="color:#c9a84c">Blog</a>
-    <a href="/blog/" data-lang-es style="color:#c9a84c">Blog</a>
+  <div class="header-top">
+    <a href="/" style="text-decoration:none"><img src="/logo_banner.png" alt="Expat Advisor MX" style="height:34px;display:block"/></a>
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
     </div>
+  </div>
+  <nav class="header-nav">
+    <a href="/#services"><span class="en">Services</span><span class="es">Servicios</span></a>
+    <a href="/#contact"><span class="en">Contact</span><span class="es">Contacto</span></a>
+    <a href="/blog/" class="active-page">Blog</a>
   </nav>
 </header>
 
 <div class="hero">
-  <h1 data-lang-en>Legal <span>Insights</span> for Expats</h1>
-  <h1 data-lang-es>Perspectivas <span>Legales</span> para Expats</h1>
-  <p data-lang-en>Practical guidance on real estate, fideicomiso, immigration and more — from 20+ years of experience in Puerto Vallarta and Riviera Nayarit.</p>
-  <p data-lang-es>Orientación práctica sobre bienes raíces, fideicomiso, inmigración y más — desde 20+ años de experiencia en Puerto Vallarta y Riviera Nayarit.</p>
+  <h1><span class="en">Legal <span style="color:#c9a84c">Insights</span> for Expats</span><span class="es" style="display:none">Perspectivas <span style="color:#c9a84c">Legales</span> para Expats</span></h1>
+  <p class="en">Practical guidance on real estate, fideicomiso, immigration and more &mdash; from 20+ years of experience in Puerto Vallarta and Riviera Nayarit.</p>
+  <p class="es" style="display:none">Orientación práctica sobre bienes raíces, fideicomiso, inmigración y más &mdash; desde 20+ años de experiencia en Puerto Vallarta y Riviera Nayarit.</p>
 </div>
 
 <div class="container">
@@ -85,16 +88,16 @@ body.lang-es [data-lang-es]{display:revert}
   <div class="post-card">
     <img src="/blog/images/preconstruction-vallarta-hero.jpg" alt="Oceanfront condominium tower under construction in Puerto Vallarta"/>
     <div class="post-card-body">
-      <span class="post-tag" data-lang-en>Real Estate</span>
-      <span class="post-tag" data-lang-es>Bienes Raíces</span>
-      <div class="post-meta" data-lang-en>April 2026 &nbsp;·&nbsp; Rolando Romero García</div>
-      <div class="post-meta" data-lang-es>Abril 2026 &nbsp;·&nbsp; Rolando Romero García</div>
-      <h2 data-lang-en>Buying Pre-Construction in Vallarta: What the Contract Won't Protect (And What Actually Will)</h2>
-      <h2 data-lang-es>Comprar en pre-construcción en Vallarta: lo que el contrato no te va a proteger (y lo que sí)</h2>
-      <p data-lang-en>The pre-construction contract is non-negotiable, the developer won't change a comma, and NOM-247 protects you only on paper. Here's where the real protection actually lives — and the six things worth verifying before you sign.</p>
-      <p data-lang-es>El contrato de pre-construcción no se negocia, el desarrollador no va a cambiar una coma, y la NOM-247 solo te protege en el papel. Aquí explicamos dónde está realmente la protección — y las seis cosas que vale la pena verificar antes de firmar.</p>
-      <a href="/blog/comprar-preconstruccion-vallarta-contrato-no-protege/" class="btn-read" data-lang-en>Read article →</a>
-      <a href="/blog/comprar-preconstruccion-vallarta-contrato-no-protege/" class="btn-read" data-lang-es>Leer artículo →</a>
+      <span class="post-tag en">Real Estate</span>
+      <span class="post-tag es" style="display:none">Bienes Raíces</span>
+      <div class="post-meta en">April 2026 &nbsp;&middot;&nbsp; Rolando Romero García</div>
+      <div class="post-meta es" style="display:none">Abril 2026 &nbsp;&middot;&nbsp; Rolando Romero García</div>
+      <h2 class="en">Buying Pre-Construction in Vallarta: What the Contract Won't Protect (And What Actually Will)</h2>
+      <h2 class="es" style="display:none">Comprar en pre-construcción en Vallarta: lo que el contrato no te va a proteger (y lo que sí)</h2>
+      <p class="en">The pre-construction contract is non-negotiable, the developer won't change a comma, and NOM-247 protects you only on paper. Here's where the real protection actually lives — and the six things worth verifying before you sign.</p>
+      <p class="es" style="display:none">El contrato de pre-construcción no se negocia, el desarrollador no va a cambiar una coma, y la NOM-247 solo te protege en el papel. Aquí explicamos dónde está realmente la protección — y las seis cosas que vale la pena verificar antes de firmar.</p>
+      <a href="/blog/comprar-preconstruccion-vallarta-contrato-no-protege/" class="btn-read en">Read article &rarr;</a>
+      <a href="/blog/comprar-preconstruccion-vallarta-contrato-no-protege/" class="btn-read es" style="display:none">Leer artículo &rarr;</a>
     </div>
   </div>
 
@@ -102,51 +105,48 @@ body.lang-es [data-lang-es]{display:revert}
   <div class="post-card">
     <img src="/blog/images/signing-escritura-mexico.jpg" alt="Signing a property deed at a notary office in Mexico"/>
     <div class="post-card-body">
-      <span class="post-tag" data-lang-en>Real Estate</span>
-      <span class="post-tag" data-lang-es>Bienes Raíces</span>
-      <div class="post-meta" data-lang-en>April 2026 &nbsp;·&nbsp; Rolando Romero García</div>
-      <div class="post-meta" data-lang-es>Abril 2026 &nbsp;·&nbsp; Rolando Romero García</div>
-      <h2 data-lang-en>The Deed Reading at Closing in Mexico: Why You Won't Remember It (And What Actually Matters)</h2>
-      <h2 data-lang-es>La lectura de la escritura en el cierre en México: por qué no la vas a recordar (y qué es lo que realmente importa)</h2>
-      <p data-lang-en>By law, your notario must read your entire escritura to you before you sign. Here's why you won't retain most of it — and why that's completely normal — and what you should actually do before closing day.</p>
-      <p data-lang-es>Por ley, el Notario debe leer tu escritura completa antes de que firmes. Aquí explicamos por qué no vas a retener casi nada — y por qué eso es completamente normal — y qué debes revisar antes del día del cierre.</p>
-      <a href="/blog/escritura-reading-closing-mexico-puerto-vallarta/" class="btn-read" data-lang-en>Read article →</a>
-      <a href="/blog/escritura-reading-closing-mexico-puerto-vallarta/" class="btn-read" data-lang-es>Leer artículo →</a>
+      <span class="post-tag en">Real Estate</span>
+      <span class="post-tag es" style="display:none">Bienes Raíces</span>
+      <div class="post-meta en">April 2026 &nbsp;&middot;&nbsp; Rolando Romero García</div>
+      <div class="post-meta es" style="display:none">Abril 2026 &nbsp;&middot;&nbsp; Rolando Romero García</div>
+      <h2 class="en">The Deed Reading at Closing in Mexico: Why You Won't Remember It (And What Actually Matters)</h2>
+      <h2 class="es" style="display:none">La lectura de la escritura en el cierre en México: por qué no la vas a recordar (y qué es lo que realmente importa)</h2>
+      <p class="en">By law, your notario must read your entire escritura to you before you sign. Here's why you won't retain most of it — and why that's completely normal — and what you should actually do before closing day.</p>
+      <p class="es" style="display:none">Por ley, el Notario debe leer tu escritura completa antes de que firmes. Aquí explicamos por qué no vas a retener casi nada — y por qué eso es completamente normal — y qué debes revisar antes del día del cierre.</p>
+      <a href="/blog/escritura-reading-closing-mexico-puerto-vallarta/" class="btn-read en">Read article &rarr;</a>
+      <a href="/blog/escritura-reading-closing-mexico-puerto-vallarta/" class="btn-read es" style="display:none">Leer artículo &rarr;</a>
     </div>
   </div>
 
 </div>
 
-<footer>© MMXXVI Expat Advisor MX &nbsp;|&nbsp; <a href="/" style="color:#c9a84c;text-decoration:none">expatadvisormx.com</a></footer>
+<footer>&copy; MMXXVI Expat Advisor MX &nbsp;|&nbsp; <a href="/" style="color:#c9a84c;text-decoration:none">expatadvisormx.com</a></footer>
 
 <script>
 function setLang(lang) {
-  document.body.classList.toggle('lang-es', lang === 'es');
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-  localStorage.setItem('expatadvisor-lang', lang);
+  var isEs = lang === 'es';
+  document.body.classList.toggle('lang-es', isEs);
+  document.getElementById('btn-en').classList.toggle('active', !isEs);
+  document.getElementById('btn-es').classList.toggle('active', isEs);
+  // Toggle all .es and .en elements explicitly for max Safari compat
+  var enEls = document.querySelectorAll('.en');
+  var esEls = document.querySelectorAll('.es');
+  for (var i = 0; i < enEls.length; i++) enEls[i].style.display = isEs ? 'none' : '';
+  for (var i = 0; i < esEls.length; i++) esEls[i].style.display = isEs ? '' : 'none';
+  try { localStorage.setItem('expatadvisor-lang', lang); } catch(e) {}
 }
-const saved = localStorage.getItem('expatadvisor-lang');
-if (saved) setLang(saved);
+try {
+  var saved = localStorage.getItem('expatadvisor-lang');
+  if (saved === 'es') setLang('es');
+} catch(e) {}
 </script>
 
 <script>
-// Desregistrar Service Worker viejo si existe
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations().then(function(registrations) {
-    for(let registration of registrations) {
-      registration.unregister();
-    }
+  navigator.serviceWorker.getRegistrations().then(function(regs) {
+    for (var i = 0; i < regs.length; i++) regs[i].unregister();
   });
-  if (window.caches) {
-    caches.keys().then(function(names) {
-      for (let name of names) {
-        if (name !== 'expat-advisor-v2') caches.delete(name);
-      }
-    });
-  }
 }
 </script>
 </body>
 </html>
-
