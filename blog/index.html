@@ -36,7 +36,18 @@ footer{text-align:center;padding:2rem;color:rgba(240,237,230,0.35);font-size:0.8
 [data-lang-es]{display:none}
 body.lang-es [data-lang-en]{display:none}
 body.lang-es [data-lang-es]{display:revert}
-@media(max-width:600px){.hero h1{font-size:1.6rem}.container{padding:2rem 1rem}}
+@media(max-width:768px){
+  header{padding:0.75rem 1rem;flex-direction:column;gap:0.75rem}
+  header nav{width:100%;justify-content:center;gap:0.5rem}
+  header nav a{margin-left:0;margin-right:0;padding:0.25rem 0.5rem;font-size:0.9rem}
+  .lang-toggle{margin-left:0.5rem}
+  .hero h1{font-size:1.6rem}
+  .hero{padding:2.5rem 1rem 2rem}
+  .container{padding:2rem 1rem}
+  .post-card img{height:180px}
+  .post-card-body{padding:1.25rem}
+  .post-card h2{font-size:1.15rem}
+}
 </style>
 </head>
 <body>
