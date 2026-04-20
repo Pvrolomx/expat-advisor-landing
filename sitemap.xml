@@ -1,13 +1,35 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://expatadvisormx.com/</loc>
-    <lastmod>2026-04-17</lastmod>
+    <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://expatadvisormx.com/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://expatadvisormx.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://expatadvisormx.com/"/>
+  </url>
+  <url>
+    <loc>https://expatadvisormx.com/blog/</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://expatadvisormx.com/blog/escritura-reading-closing-mexico-puerto-vallarta/</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expatadvisormx.com/blog/escritura-reading-closing-mexico-puerto-vallarta/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://expatadvisormx.com/blog/escritura-reading-closing-mexico-puerto-vallarta/"/>
+  </url>
+  <url>
+    <loc>https://expatadvisormx.com/blog/comprar-preconstruccion-vallarta-contrato-no-protege/</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://expatadvisormx.com/blog/comprar-preconstruccion-vallarta-contrato-no-protege/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://expatadvisormx.com/blog/comprar-preconstruccion-vallarta-contrato-no-protege/"/>
   </url>
 </urlset>
