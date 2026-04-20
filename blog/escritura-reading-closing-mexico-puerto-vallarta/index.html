@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+<meta http-equiv="Pragma" content="no-cache"/>
+<meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title data-lang-en>The Deed Reading at Closing in Mexico: Why You Won't Remember It | Expat Advisor MX</title>
 <meta name="description" data-lang-en content="Buying property in Puerto Vallarta? Find out why the reading of your escritura at closing is cognitively overwhelming for everyone — and what you should actually review before you sit down to sign."/>
@@ -68,15 +71,19 @@ body.lang-es [data-lang-en]{display:none}
 body.lang-es [data-lang-es]{display:revert}
 
 @media(max-width:768px){
-  header{padding:0.75rem 1rem;flex-direction:column;gap:0.75rem}
-  header nav{width:100%;justify-content:center;gap:0.5rem;flex-wrap:wrap}
-  header nav a{margin-left:0;margin-right:0;padding:0.25rem 0.5rem;font-size:0.9rem}
-  .lang-toggle{margin-left:0.5rem}
+  header{padding:0.75rem 1rem !important;flex-direction:column !important;gap:0.5rem !important;align-items:center !important}
+  header a.logo,header a.logo-link{display:block}
+  header nav{width:100% !important;display:flex !important;justify-content:center !important;align-items:center !important;flex-wrap:wrap !important;gap:0.25rem !important;margin:0 !important}
+  header nav a{margin:0 0.4rem !important;padding:0.3rem 0.2rem !important;font-size:0.88rem !important;opacity:1 !important;display:inline-block}
+  .lang-toggle{margin-left:0.5rem !important;display:inline-flex !important;gap:0.3rem}
+  .lang-btn{padding:0.2rem 0.5rem !important;font-size:0.8rem}
   h1{font-size:1.5rem}
   h2{font-size:1.15rem}
   .article-wrap{padding:2rem 1rem 4rem}
   .hero-img{max-height:280px}
   .mid-img{max-height:240px}
+  .checklist{padding:1.25rem}
+  .checklist-item{gap:0.75rem}
   .cta-box{padding:1.5rem}
 }
 </style>
@@ -258,6 +265,24 @@ function setLang(lang) {
 }
 const saved = localStorage.getItem('expatadvisor-lang');
 if (saved) setLang(saved);
+</script>
+
+<script>
+// Desregistrar Service Worker viejo si existe
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    for(let registration of registrations) {
+      registration.unregister();
+    }
+  });
+  if (window.caches) {
+    caches.keys().then(function(names) {
+      for (let name of names) {
+        if (name !== 'expat-advisor-v2') caches.delete(name);
+      }
+    });
+  }
+}
 </script>
 </body>
 </html>
