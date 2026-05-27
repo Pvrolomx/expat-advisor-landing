@@ -66,6 +66,17 @@ footer{text-align:center;padding:2rem;color:rgba(240,237,230,0.35);font-size:0.8
 <div class="container">
 
   <div class="post-card">
+    <img src="/blog/images/corporation-vs-individual-fideicomiso-hero.jpg" alt="Two formal legal folders with corporate seals beside a personal property document on a lawyer's desk"/>
+    <div class="post-card-body">
+      <span class="post-tag" id="tag3">Real Estate</span>
+      <div class="post-meta" id="meta3">May 26, 2026 &nbsp;&middot;&nbsp; Rolando Romero García</div>
+      <h2 id="h2-3">Buying Property in Mexico Through Your LLC or Corporation: What Your Accountant Won't Tell You</h2>
+      <p id="p3">Your accountant told you to buy through your LLC or corporation. It sounds logical&mdash;deduct trips, depreciate the property, keep money working inside the company. But FAPI rules in Canada, Revenue Ruling 2013-14 in the United States, and dividend withholding in Mexico can turn that "tax strategy" into a mistake worth thousands of dollars. Here's when it actually makes sense and when it doesn't.</p>
+      <a href="/blog/foreign-entity-buying-property-mexico/" class="btn-read" id="btn3">Read article &rarr;</a>
+    </div>
+  </div>
+
+  <div class="post-card">
     <img src="/blog/images/preconstruction-vallarta-hero.jpg" alt="Oceanfront condominium tower under construction in Puerto Vallarta"/>
     <div class="post-card-body">
       <span class="post-tag" id="tag1">Real Estate</span>
@@ -97,25 +108,31 @@ var T = {
     services: 'Services', contact: 'Contact',
     hero: 'Legal <span style="color:#c9a84c">Insights</span> for Expats',
     heroSub: 'Practical guidance on real estate, fideicomiso, immigration and more — from 20+ years of experience in Puerto Vallarta and Riviera Nayarit.',
-    tag: 'Real Estate', meta: 'April 2026 · Rolando Romero García',
+    tag: 'Real Estate', meta: 'April 2026 · Rolando Romero García', meta3: 'May 26, 2026 · Rolando Romero García',
     h1: 'Buying Pre-Construction in Vallarta: What the Contract Won’t Protect (And What Actually Will)',
     p1: 'The pre-construction contract is non-negotiable, the developer won’t change a comma, and NOM-247 protects you only on paper. Here’s where the real protection actually lives — and the six things worth verifying before you sign.',
     btn1: 'Read article →',
     h2: 'The Deed Reading at Closing in Mexico: Why You Won’t Remember It (And What Actually Matters)',
     p2: 'By law, your notario must read your entire escritura to you before you sign. Here’s why you won’t retain most of it — and why that’s completely normal — and what you should actually do before closing day.',
-    btn2: 'Read article →'
+    btn2: 'Read article →',
+    h3: 'Buying Property in Mexico Through Your LLC or Corporation: What Your Accountant Won’t Tell You',
+    p3: 'Your accountant told you to buy through your LLC or corporation. It sounds logical—deduct trips, depreciate the property, keep money working inside the company. But FAPI rules in Canada, Revenue Ruling 2013-14 in the United States, and dividend withholding in Mexico can turn that "tax strategy" into a mistake worth thousands of dollars. Here’s when it actually makes sense and when it doesn’t.',
+    btn3: 'Read article →'
   },
   es: {
     services: 'Servicios', contact: 'Contacto',
     hero: 'Perspectivas <span style="color:#c9a84c">Legales</span> para Expats',
     heroSub: 'Orientación práctica sobre bienes raíces, fideicomiso, inmigración y más — desde 20+ años de experiencia en Puerto Vallarta y Riviera Nayarit.',
-    tag: 'Bienes Raíces', meta: 'Abril 2026 · Rolando Romero García',
+    tag: 'Bienes Raíces', meta: 'Abril 2026 · Rolando Romero García', meta3: '26 de mayo de 2026 · Rolando Romero García',
     h1: 'Comprar en pre-construcción en Vallarta: lo que el contrato no te va a proteger (y lo que sí)',
     p1: 'El contrato de pre-construcción no se negocia, el desarrollador no va a cambiar una coma, y la NOM-247 solo te protege en el papel. Aquí explicamos dónde está realmente la protección — y las seis cosas que vale la pena verificar antes de firmar.',
     btn1: 'Leer artículo →',
     h2: 'La lectura de la escritura en el cierre en México: por qué no la vas a recordar (y qué es lo que realmente importa)',
     p2: 'Por ley, el Notario debe leer tu escritura completa antes de que firmes. Aquí explicamos por qué no vas a retener casi nada — y por qué eso es completamente normal — y qué debes revisar antes del día del cierre.',
-    btn2: 'Leer artículo →'
+    btn2: 'Leer artículo →',
+    h3: 'Comprar en México con tu LLC o Corporación: Lo que tu Contador No te Dirá',
+    p3: 'Tu contador te dijo que compraras con tu LLC o corporación. Suena lógico — deduces viajes, deprecias el inmueble, el dinero trabaja sin salir de la empresa. Pero las reglas de FAPI en Canadá, el Revenue Ruling 2013-14 en Estados Unidos, y la retención sobre dividendos en México pueden convertir esa "estrategia fiscal" en un error de miles de dólares. Aquí te explico cuándo sí tiene sentido y cuándo no.',
+    btn3: 'Leer artículo →'
   }
 };
 function setLang(lang) {
@@ -134,6 +151,11 @@ function setLang(lang) {
   document.getElementById('h2-2').textContent = t.h2;
   document.getElementById('p2').textContent = t.p2;
   document.getElementById('btn2').textContent = t.btn2;
+  document.getElementById('tag3').textContent = t.tag;
+  document.getElementById('meta3').textContent = t.meta3;
+  document.getElementById('h2-3').textContent = t.h3;
+  document.getElementById('p3').textContent = t.p3;
+  document.getElementById('btn3').textContent = t.btn3;
   document.getElementById('btn-en').classList.toggle('active', lang==='en');
   document.getElementById('btn-es').classList.toggle('active', lang==='es');
   try { localStorage.setItem('expatadvisor-lang', lang); } catch(e){}
