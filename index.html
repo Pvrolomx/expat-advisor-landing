@@ -708,13 +708,11 @@
             opacity: 0.8;
         }
 
-        [data-lang-es] { display: none; }
-        body.lang-es [data-lang-es] { display: block; }
-        body.lang-es [data-lang-en] { display: none; }
-        body.lang-es span[data-lang-es] { display: inline; }
-        body.lang-es span[data-lang-en] { display: none; }
-        span[data-lang-en] { display: inline; }
-        span[data-lang-es] { display: none; }
+        /* Lang system — canonical scheme (scales to N languages; revert handles block/inline natively) */
+        [data-lang] { display: none; }
+        body[data-active-lang="en"] [data-lang="en"],
+        body[data-active-lang="es"] [data-lang="es"],
+        body[data-active-lang="fr"] [data-lang="fr"] { display: revert; }
 
 
         @media (max-width: 768px) {
@@ -836,7 +834,7 @@
     <link rel="alternate" hreflang="es" href="https://expatadvisormx.com/" />
     <link rel="alternate" hreflang="x-default" href="https://expatadvisormx.com/" />
 </head>
-<body>
+<body data-active-lang="en">
     <nav>
         <div class="logo"><img src="logo_banner.png" alt="Expat Advisor MX" style="height: 40px;"></div>
         <ul class="nav-links">
@@ -850,67 +848,67 @@
             <button onclick="setLang('en')" id="btn-en" class="active">🇺🇸</button>
             <button onclick="setLang('es')" id="btn-es">🇲🇽</button>
         </div>
-        <button id="install-btn" class="nav-cta hidden" onclick="installApp()"><span data-lang-en>📲 Install App</span><span data-lang-es>📲 Instalar App</span></button>
+        <button id="install-btn" class="nav-cta hidden" onclick="installApp()"><span data-lang="en">📲 Install App</span><span data-lang="es">📲 Instalar App</span></button>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <h1 data-lang-en>Legal Services for <span>Expats</span> in Mexico</h1>
-            <h1 data-lang-es>Servicios Legales para <span>Expats</span> en México</h1>
-            <p data-lang-en>Real Estate • Immigration • Condo Law • Wills • Property Management</p>
-            <p data-lang-es>Inmobiliaria • Migración • Condominio • Testamentos • Administración</p>
-            <p class="subtitle" data-lang-en>20+ Years Experience in Puerto Vallarta & Bahía de Banderas</p>
-            <p class="subtitle" data-lang-es>20+ Años de Experiencia en Puerto Vallarta y Bahía de Banderas</p>
+            <h1 data-lang="en">Legal Services for <span>Expats</span> in Mexico</h1>
+            <h1 data-lang="es">Servicios Legales para <span>Expats</span> en México</h1>
+            <p data-lang="en">Real Estate • Immigration • Condo Law • Wills • Property Management</p>
+            <p data-lang="es">Inmobiliaria • Migración • Condominio • Testamentos • Administración</p>
+            <p class="subtitle" data-lang="en">20+ Years Experience in Puerto Vallarta & Bahía de Banderas</p>
+            <p class="subtitle" data-lang="es">20+ Años de Experiencia en Puerto Vallarta y Bahía de Banderas</p>
             <div class="btn-group">
-                <a href="#contact" class="btn btn-primary"><span data-lang-en>Schedule Consultation</span><span data-lang-es>Agendar Consulta</span></a>
+                <a href="#contact" class="btn btn-primary"><span data-lang="en">Schedule Consultation</span><span data-lang="es">Agendar Consulta</span></a>
                 <a href="https://wa.me/523221110294" class="btn btn-whatsapp">💬 WhatsApp</a>
             </div>
         </div>
     </section>
 
     <section id="services">
-        <h2 class="section-title" data-lang-en>Legal <span>Services</span></h2><h2 class="section-title" data-lang-es>Servicios <span>Legales</span></h2>
+        <h2 class="section-title" data-lang="en">Legal <span>Services</span></h2><h2 class="section-title" data-lang="es">Servicios <span>Legales</span></h2>
         <div class="services-grid">
             <div class="service-card with-image real-estate" onclick="showServiceModal('real-estate')">
                 <div class="card-content">
-                    <h3><span data-lang-en>Real Estate</span><span data-lang-es>Bienes Raíces</span></h3>
-                    <p><span data-lang-en>Your single point of contact for buying, selling & protecting property in Mexico</span><span data-lang-es>Tu único punto de contacto para comprar, vender y proteger propiedad en México</span></p>
-                    <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
+                    <h3><span data-lang="en">Real Estate</span><span data-lang="es">Bienes Raíces</span></h3>
+                    <p><span data-lang="en">Your single point of contact for buying, selling & protecting property in Mexico</span><span data-lang="es">Tu único punto de contacto para comprar, vender y proteger propiedad en México</span></p>
+                    <span class="click-hint"><span data-lang="en">Click for details →</span><span data-lang="es">Clic para más detalles →</span></span>
                 </div>
             </div>
             <div class="service-card with-image immigration" onclick="showServiceModal('immigration')">
                 <div class="card-content">
-                    <h3><span data-lang-en>Immigration</span><span data-lang-es>Migración</span></h3>
-                    <p><span data-lang-en>Direct representation before INM for residency, visas & work permits</span><span data-lang-es>Representación directa ante INM para residencia, visas y permisos de trabajo</span></p>
-                    <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
+                    <h3><span data-lang="en">Immigration</span><span data-lang="es">Migración</span></h3>
+                    <p><span data-lang="en">Direct representation before INM for residency, visas & work permits</span><span data-lang="es">Representación directa ante INM para residencia, visas y permisos de trabajo</span></p>
+                    <span class="click-hint"><span data-lang="en">Click for details →</span><span data-lang="es">Clic para más detalles →</span></span>
                 </div>
             </div>
             <div class="service-card with-image condo" onclick="showServiceModal('condo')">
                 <div class="card-content">
-                    <h3><span data-lang-en>Condo Law</span><span data-lang-es>Régimen de Condominio</span></h3>
-                    <p><span data-lang-en>Know your rights and obligations as a condo owner or HOA board member</span><span data-lang-es>Conoce tus derechos y obligaciones como condómino o miembro de la mesa directiva</span></p>
-                    <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
+                    <h3><span data-lang="en">Condo Law</span><span data-lang="es">Régimen de Condominio</span></h3>
+                    <p><span data-lang="en">Know your rights and obligations as a condo owner or HOA board member</span><span data-lang="es">Conoce tus derechos y obligaciones como condómino o miembro de la mesa directiva</span></p>
+                    <span class="click-hint"><span data-lang="en">Click for details →</span><span data-lang="es">Clic para más detalles →</span></span>
                 </div>
             </div>
             <div class="service-card with-image wills" onclick="showServiceModal('wills')">
                 <div class="card-content">
-                    <h3><span data-lang-en>Wills & Succession</span><span data-lang-es>Testamentos y Sucesiones</span></h3>
-                    <p><span data-lang-en>Secure your legacy — from drafting your will to executing the succession</span><span data-lang-es>Asegura tu legado — desde redactar tu testamento hasta ejecutar la sucesión</span></p>
-                    <span class="click-hint"><span data-lang-en>Click for details →</span><span data-lang-es>Clic para más detalles →</span></span>
+                    <h3><span data-lang="en">Wills & Succession</span><span data-lang="es">Testamentos y Sucesiones</span></h3>
+                    <p><span data-lang="en">Secure your legacy — from drafting your will to executing the succession</span><span data-lang="es">Asegura tu legado — desde redactar tu testamento hasta ejecutar la sucesión</span></p>
+                    <span class="click-hint"><span data-lang="en">Click for details →</span><span data-lang="es">Clic para más detalles →</span></span>
                 </div>
             </div>
             <div class="service-card with-image property-management" onclick="window.open('https://castlesolutions.mx','_blank')">
                 <div class="card-content">
-                    <h3><span data-lang-en>Property Management</span><span data-lang-es>Administración de Propiedades</span></h3>
-                    <p><span data-lang-en>Vacation rental management by our sister company Castle Solutions</span><span data-lang-es>Administración de rentas vacacionales por nuestra empresa hermana Castle Solutions</span></p>
-                    <span class="click-hint"><span data-lang-en>Visit Castle Solutions →</span><span data-lang-es>Visitar Castle Solutions →</span></span>
+                    <h3><span data-lang="en">Property Management</span><span data-lang="es">Administración de Propiedades</span></h3>
+                    <p><span data-lang="en">Vacation rental management by our sister company Castle Solutions</span><span data-lang="es">Administración de rentas vacacionales por nuestra empresa hermana Castle Solutions</span></p>
+                    <span class="click-hint"><span data-lang="en">Visit Castle Solutions →</span><span data-lang="es">Visitar Castle Solutions →</span></span>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="about" class="about">
-        <h2 class="section-title" data-lang-en>Why <span>Choose Us</span></h2><h2 class="section-title" data-lang-es>Por Qué <span>Elegirnos</span></h2>
+        <h2 class="section-title" data-lang="en">Why <span>Choose Us</span></h2><h2 class="section-title" data-lang="es">Por Qué <span>Elegirnos</span></h2>
         <div class="about-content">
             <div class="about-text">
                 <h3>Two Decades of Expat Legal Experience</h3>
@@ -923,14 +921,14 @@
                     &#x2713; Expert in both Jalisco &amp; Nayarit state laws<br>
                     &#x2713; Bilingual team (English &amp; Spanish)<br>
                     &#x2713; Deep relationships with notaries, banks &amp; government offices</p>
-                    <div data-lang-en style="margin-top:1.2rem; padding:1rem 1.2rem; background:rgba(255,255,255,0.07); border-left:3px solid #c9a84c; border-radius:4px;">
+                    <div data-lang="en" style="margin-top:1.2rem; padding:1rem 1.2rem; background:rgba(255,255,255,0.07); border-left:3px solid #c9a84c; border-radius:4px;">
                         <p style="margin:0; font-size:0.97rem; line-height:1.7;">
                             <strong>Lic. Rolando Romero Garc&iacute;a</strong><br>
                             Professional License No. 5255863 &mdash; SEP / Direcci&oacute;n General de Profesiones<br>
                             Law Degree &nbsp;&middot;&nbsp; 20+ years of experience in Puerto Vallarta &amp; Riviera Nayarit
                         </p>
                     </div>
-                    <div data-lang-es style="margin-top:1.2rem; padding:1rem 1.2rem; background:rgba(255,255,255,0.07); border-left:3px solid #c9a84c; border-radius:4px;">
+                    <div data-lang="es" style="margin-top:1.2rem; padding:1rem 1.2rem; background:rgba(255,255,255,0.07); border-left:3px solid #c9a84c; border-radius:4px;">
                         <p style="margin:0; font-size:0.97rem; line-height:1.7;">
                             <strong>Lic. Rolando Romero Garc&iacute;a</strong><br>
                             C&eacute;dula Profesional No. 5255863 &mdash; SEP / Direcci&oacute;n General de Profesiones<br>
@@ -961,42 +959,42 @@
     </section>
 
     <section id="process">
-        <h2 class="section-title" data-lang-en>How We <span>Work</span></h2><h2 class="section-title" data-lang-es>Cómo <span>Trabajamos</span></h2>
+        <h2 class="section-title" data-lang="en">How We <span>Work</span></h2><h2 class="section-title" data-lang="es">Cómo <span>Trabajamos</span></h2>
         <div class="process-steps">
             <div class="step">
                 <div class="step-number">1</div>
-                <h3><span data-lang-en>Ask Us Anything</span><span data-lang-es>Pregunta lo que Sea</span></h3>
-                <p><span data-lang-en>Call, email, or WhatsApp us with any question — no charge, no commitment. We believe in earning your trust before earning your business.</span><span data-lang-es>Llámanos, escríbenos o mándanos WhatsApp con cualquier pregunta — sin costo, sin compromiso. Creemos en ganarnos tu confianza antes de ganarnos tu negocio.</span></p>
+                <h3><span data-lang="en">Ask Us Anything</span><span data-lang="es">Pregunta lo que Sea</span></h3>
+                <p><span data-lang="en">Call, email, or WhatsApp us with any question — no charge, no commitment. We believe in earning your trust before earning your business.</span><span data-lang="es">Llámanos, escríbenos o mándanos WhatsApp con cualquier pregunta — sin costo, sin compromiso. Creemos en ganarnos tu confianza antes de ganarnos tu negocio.</span></p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h3><span data-lang-en>Get a Straight Answer</span><span data-lang-es>Recibe una Respuesta Directa</span></h3>
-                <p><span data-lang-en>No runaround, no billable clock running. We'll tell you what you need to know — even if the answer is "you don't need a lawyer for that."</span><span data-lang-es>Sin rodeos, sin reloj corriendo. Te decimos lo que necesitas saber — incluso si la respuesta es "para eso no necesitas abogado."</span></p>
+                <h3><span data-lang="en">Get a Straight Answer</span><span data-lang="es">Recibe una Respuesta Directa</span></h3>
+                <p><span data-lang="en">No runaround, no billable clock running. We'll tell you what you need to know — even if the answer is "you don't need a lawyer for that."</span><span data-lang="es">Sin rodeos, sin reloj corriendo. Te decimos lo que necesitas saber — incluso si la respuesta es "para eso no necesitas abogado."</span></p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h3><span data-lang-en>We Handle It</span><span data-lang-es>Nosotros nos Encargamos</span></h3>
-                <p><span data-lang-en>If you need our services, we give you a clear scope and transparent pricing. Then we coordinate everything — notaries, trustees, government offices — so you don't have to.</span><span data-lang-es>Si necesitas nuestros servicios, te damos un alcance claro y precios transparentes. Luego coordinamos todo — notarios, fiduciarios, oficinas de gobierno — para que tú no tengas que hacerlo.</span></p>
+                <h3><span data-lang="en">We Handle It</span><span data-lang="es">Nosotros nos Encargamos</span></h3>
+                <p><span data-lang="en">If you need our services, we give you a clear scope and transparent pricing. Then we coordinate everything — notaries, trustees, government offices — so you don't have to.</span><span data-lang="es">Si necesitas nuestros servicios, te damos un alcance claro y precios transparentes. Luego coordinamos todo — notarios, fiduciarios, oficinas de gobierno — para que tú no tengas que hacerlo.</span></p>
             </div>
             <div class="step">
                 <div class="step-number">4</div>
-                <h3><span data-lang-en>Clients for Life</span><span data-lang-es>Clientes de por Vida</span></h3>
-                <p><span data-lang-en>20 years in Puerto Vallarta means we're not going anywhere. Questions after your transaction? Call us. That's how we've built our practice — one relationship at a time.</span><span data-lang-es>20 años en Puerto Vallarta significa que no nos vamos a ningún lado. ¿Preguntas después de tu trámite? Llámanos. Así hemos construido nuestra práctica — una relación a la vez.</span></p>
+                <h3><span data-lang="en">Clients for Life</span><span data-lang="es">Clientes de por Vida</span></h3>
+                <p><span data-lang="en">20 years in Puerto Vallarta means we're not going anywhere. Questions after your transaction? Call us. That's how we've built our practice — one relationship at a time.</span><span data-lang="es">20 años en Puerto Vallarta significa que no nos vamos a ningún lado. ¿Preguntas después de tu trámite? Llámanos. Así hemos construido nuestra práctica — una relación a la vez.</span></p>
             </div>
         </div>
     </section>
 
     <section id="testimonials" class="testimonials">
-        <h2 class="section-title" data-lang-en>Client <span>Testimonials</span></h2><h2 class="section-title" data-lang-es><span>Testimonios</span> de Clientes</h2>
+        <h2 class="section-title" data-lang="en">Client <span>Testimonials</span></h2><h2 class="section-title" data-lang="es"><span>Testimonios</span> de Clientes</h2>
         <div class="testimonial-grid">
             <div class="testimonial">
-                <p data-lang-en>"Buying property in Mexico seemed overwhelming until we found this team. They explained the fideicomiso process clearly and handled everything professionally."</p>
-                <p data-lang-es>"Comprar propiedad en México parecía abrumador hasta que encontramos este equipo. Nos explicaron el proceso de fideicomiso claramente y manejaron todo profesionalmente."</p>
+                <p data-lang="en">"Buying property in Mexico seemed overwhelming until we found this team. They explained the fideicomiso process clearly and handled everything professionally."</p>
+                <p data-lang="es">"Comprar propiedad en México parecía abrumador hasta que encontramos este equipo. Nos explicaron el proceso de fideicomiso claramente y manejaron todo profesionalmente."</p>
                 <div class="author">— Michael & Susan, California</div>
             </div>
             <div class="testimonial">
-                <p data-lang-en>"After a nightmare experience with another firm, these guys restored my faith. My condo dispute was resolved and I finally have peace of mind."</p>
-                <p data-lang-es>"Después de una experiencia de pesadilla con otra firma, estos tipos restauraron mi fe. Mi disputa de condominio se resolvió y finalmente tengo paz mental."</p>
+                <p data-lang="en">"After a nightmare experience with another firm, these guys restored my faith. My condo dispute was resolved and I finally have peace of mind."</p>
+                <p data-lang="es">"Después de una experiencia de pesadilla con otra firma, estos tipos restauraron mi fe. Mi disputa de condominio se resolvió y finalmente tengo paz mental."</p>
                 <div class="author">— David R., Texas</div>
             </div>
             <div class="testimonial">
@@ -1004,15 +1002,15 @@
                 <div class="author">— Jennifer & Tom, British Columbia</div>
             </div>
             <div class="testimonial">
-                <p data-lang-en>"We were about to lose over $30,000 USD to tax withholding on our property sale. Our notary said it was mandatory. Expat Advisor MX reviewed our case, proved we qualified for the primary residence exemption, and we walked away with our full proceeds. That one consultation saved us more than we'd spent in years of legal fees."</p>
-                <p data-lang-es>"Estábamos a punto de perder más de $30,000 USD por retención de impuestos en la venta de nuestra propiedad. Nuestro notario decía que era obligatorio. Expat Advisor MX revisó nuestro caso, demostró que calificábamos para la exención de casa habitación, y nos fuimos con el total de nuestros fondos. Esa sola consulta nos ahorró más de lo que habíamos gastado en años de honorarios legales."</p>
+                <p data-lang="en">"We were about to lose over $30,000 USD to tax withholding on our property sale. Our notary said it was mandatory. Expat Advisor MX reviewed our case, proved we qualified for the primary residence exemption, and we walked away with our full proceeds. That one consultation saved us more than we'd spent in years of legal fees."</p>
+                <p data-lang="es">"Estábamos a punto de perder más de $30,000 USD por retención de impuestos en la venta de nuestra propiedad. Nuestro notario decía que era obligatorio. Expat Advisor MX revisó nuestro caso, demostró que calificábamos para la exención de casa habitación, y nos fuimos con el total de nuestros fondos. Esa sola consulta nos ahorró más de lo que habíamos gastado en años de honorarios legales."</p>
                 <div class="author">— Kevin & Laura, Alberta</div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="contact-section">
-        <h2 class="section-title" data-lang-en>Get In <span>Touch</span></h2><h2 class="section-title" data-lang-es><span>Contáctanos</span></h2>
+        <h2 class="section-title" data-lang="en">Get In <span>Touch</span></h2><h2 class="section-title" data-lang="es"><span>Contáctanos</span></h2>
         <div class="contact-grid">
             <div class="contact-form">
                 <h3>Send Us a Message</h3>
@@ -1027,9 +1025,9 @@
                         <input type="email" id="email" name="email" required placeholder="john@example.com">
                     </div>
                     <div class="form-group">
-                        <label for="service"><span data-lang-en>Service Needed</span><span data-lang-es>Servicio Requerido</span></label>
+                        <label for="service"><span data-lang="en">Service Needed</span><span data-lang="es">Servicio Requerido</span></label>
                         <select id="service" name="service">
-                            <option value="" data-lang-en>Select a service...</option><option value="" data-lang-es style="display:none">Selecciona un servicio...</option>
+                            <option value="" data-lang="en">Select a service...</option><option value="" data-lang="es" style="display:none">Selecciona un servicio...</option>
                             <option value="Real Estate">Real Estate / Bienes Raíces</option>
                             <option value="Immigration">Immigration / Migración</option>
                             <option value="Condo Law">Condo Law / Régimen de Condominio</option>
@@ -1042,7 +1040,7 @@
                         <label for="message">Your Message *</label>
                         <textarea id="message" name="message" required placeholder="Tell us about your situation..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;"><span data-lang-en>Send Message</span><span data-lang-es>Enviar Mensaje</span></button>
+                    <button type="submit" class="btn btn-primary" style="width:100%;"><span data-lang="en">Send Message</span><span data-lang="es">Enviar Mensaje</span></button>
                 </form>
             </div>
             <div class="contact-info">
@@ -1058,7 +1056,7 @@
                 <div class="contact-item">
                     <span class="icon">📍</span>
                     <div>
-                        <strong><span data-lang-en>Location</span><span data-lang-es>Ubicación</span></strong><br>
+                        <strong><span data-lang="en">Location</span><span data-lang="es">Ubicación</span></strong><br>
                         Puerto Vallarta, Jalisco<br>
                         Bah&iacute;a de Banderas, Nayarit<br>
                         <span style="font-size:0.88rem; opacity:0.8;">Nuevo Vallarta &nbsp;&middot;&nbsp; Bucer&iacute;as &nbsp;&middot;&nbsp; La Cruz de Huanacaxtle &nbsp;&middot;&nbsp; Sayulita &nbsp;&middot;&nbsp; San Pancho &nbsp;&middot;&nbsp; Lo de Marcos &nbsp;&middot;&nbsp; Punta de Mita</span>
@@ -1084,8 +1082,8 @@
                 <ul id="sm-list"></ul>
             </div>
             <div class="service-modal-footer">
-                <a href="#contact" class="btn btn-primary" onclick="closeServiceModal()"><span data-lang-en>Get a Consultation</span><span data-lang-es>Solicitar Consulta</span></a>
-                <button class="btn-ghost" onclick="closeServiceModal()"><span data-lang-en>Close</span><span data-lang-es>Cerrar</span></button>
+                <a href="#contact" class="btn btn-primary" onclick="closeServiceModal()"><span data-lang="en">Get a Consultation</span><span data-lang="es">Solicitar Consulta</span></a>
+                <button class="btn-ghost" onclick="closeServiceModal()"><span data-lang="en">Close</span><span data-lang="es">Cerrar</span></button>
             </div>
         </div>
     </div>
@@ -1094,15 +1092,15 @@
     <div id="success-modal" class="modal-overlay" onclick="if(event.target===this)closeModal()">
         <div class="modal-content" style="max-width: 440px; text-align: left;">
             <div class="modal-icon" style="text-align: center;">✅</div>
-            <h3 class="modal-title" style="text-align: center;"><span data-lang-en>Message Received!</span><span data-lang-es>¡Mensaje Recibido!</span></h3>
-            <p class="modal-text"><span data-lang-en>Thank you for reaching out to Expat Advisor MX. We've received your message and will get back to you within the next 24 hours.</span><span data-lang-es>Gracias por contactar a Expat Advisor MX. Hemos recibido tu mensaje y te responderemos dentro de las siguientes 24 horas.</span></p>
-            <p class="modal-text" style="font-size: 0.9rem;"><span data-lang-en>If your matter is urgent, feel free to reach us directly:</span><span data-lang-es>Si tu asunto es urgente, contáctanos directamente:</span></p>
+            <h3 class="modal-title" style="text-align: center;"><span data-lang="en">Message Received!</span><span data-lang="es">¡Mensaje Recibido!</span></h3>
+            <p class="modal-text"><span data-lang="en">Thank you for reaching out to Expat Advisor MX. We've received your message and will get back to you within the next 24 hours.</span><span data-lang="es">Gracias por contactar a Expat Advisor MX. Hemos recibido tu mensaje y te responderemos dentro de las siguientes 24 horas.</span></p>
+            <p class="modal-text" style="font-size: 0.9rem;"><span data-lang="en">If your matter is urgent, feel free to reach us directly:</span><span data-lang="es">Si tu asunto es urgente, contáctanos directamente:</span></p>
             <div style="display: flex; gap: 0.75rem; margin-bottom: 1.5rem;">
                 <a href="https://wa.me/523221110294" class="btn btn-whatsapp" style="flex: 1; text-align: center; font-size: 0.9rem;">💬 WhatsApp</a>
-                <a href="tel:+523221110294" class="btn btn-primary" style="flex: 1; text-align: center; font-size: 0.9rem;">📞 <span data-lang-en>Call Us</span><span data-lang-es>Llámanos</span></a>
+                <a href="tel:+523221110294" class="btn btn-primary" style="flex: 1; text-align: center; font-size: 0.9rem;">📞 <span data-lang="en">Call Us</span><span data-lang="es">Llámanos</span></a>
             </div>
-            <p style="font-size: 0.8rem; opacity: 0.6; text-align: center; margin: 0;"><span data-lang-en>— Expat Advisor MX</span><span data-lang-es>— Expat Advisor MX</span></p>
-            <button onclick="closeModal()" class="btn btn-primary" style="width: 100%; margin-top: 1rem;"><span data-lang-en>Got it</span><span data-lang-es>Entendido</span></button>
+            <p style="font-size: 0.8rem; opacity: 0.6; text-align: center; margin: 0;"><span data-lang="en">— Expat Advisor MX</span><span data-lang="es">— Expat Advisor MX</span></p>
+            <button onclick="closeModal()" class="btn btn-primary" style="width: 100%; margin-top: 1rem;"><span data-lang="en">Got it</span><span data-lang="es">Entendido</span></button>
         </div>
     </div>
 
@@ -1199,7 +1197,7 @@
         function showServiceModal(id) {
             const data = serviceData[id];
             if (!data) return;
-            const lang = localStorage.getItem('lang') || 'en';
+            const lang = localStorage.getItem('expatadvisor-lang') || 'en';
             document.getElementById('sm-icon').textContent = data.icon;
             document.getElementById('sm-title').textContent = data.title[lang];
             const list = document.getElementById('sm-list');
@@ -1268,13 +1266,11 @@
 
     <script>
         function setLang(lang) {
-            if (lang === 'es') {
-                document.body.classList.add('lang-es');
-            } else {
-                document.body.classList.remove('lang-es');
-            }
-            document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-            document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+            document.body.setAttribute('data-active-lang', lang);
+            ['en','es','fr'].forEach(function(l){
+                var btn = document.getElementById('btn-' + l);
+                if (btn) btn.classList.toggle('active', l === lang);
+            });
             localStorage.setItem('expatadvisor-lang', lang);
         }
 
