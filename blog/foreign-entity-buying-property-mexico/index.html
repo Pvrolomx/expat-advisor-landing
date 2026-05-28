@@ -6,10 +6,10 @@
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title data-lang-en>Buying Property in Mexico Through Your LLC or Corporation | Expat Advisor MX</title>
-<title data-lang-es>Comprar en México con tu LLC o Corporación | Expat Advisor MX</title>
-<meta name="description" data-lang-en content="Your accountant told you to buy through your LLC or corporation. Here's why FAPI in Canada, Revenue Ruling 2013-14 in the US, and Mexican dividend withholding can turn that into a costly mistake — and when it actually makes sense."/>
-<meta name="description" data-lang-es content="Tu contador te dijo que compraras con tu LLC o corporación. Aquí explico por qué FAPI en Canadá, el Revenue Ruling 2013-14 en EE.UU. y la retención de dividendos en México pueden volverlo un error costoso — y cuándo sí tiene sentido."/>
+<title data-lang="en">Buying Property in Mexico Through Your LLC or Corporation | Expat Advisor MX</title>
+<title data-lang="es">Comprar en México con tu LLC o Corporación | Expat Advisor MX</title>
+<meta name="description" data-lang="en" content="Your accountant told you to buy through your LLC or corporation. Here's why FAPI in Canada, Revenue Ruling 2013-14 in the US, and Mexican dividend withholding can turn that into a costly mistake — and when it actually makes sense."/>
+<meta name="description" data-lang="es" content="Tu contador te dijo que compraras con tu LLC o corporación. Aquí explico por qué FAPI en Canadá, el Revenue Ruling 2013-14 en EE.UU. y la retención de dividendos en México pueden volverlo un error costoso — y cuándo sí tiene sentido."/>
 <link rel="canonical" href="https://expatadvisormx.com/blog/foreign-entity-buying-property-mexico/"/>
 <link rel="alternate" hreflang="en" href="https://expatadvisormx.com/blog/foreign-entity-buying-property-mexico/"/>
 <link rel="alternate" hreflang="es" href="https://expatadvisormx.com/blog/foreign-entity-buying-property-mexico/"/>
@@ -68,10 +68,11 @@ em{color:rgba(240,237,230,0.7)}
 .back-link:hover{text-decoration:underline}
 footer{text-align:center;padding:2rem;color:rgba(240,237,230,0.35);font-size:0.85rem;border-top:1px solid rgba(201,168,76,0.1)}
 
-/* Lang system — same as main site */
-[data-lang-es]{display:none}
-body.lang-es [data-lang-en]{display:none}
-body.lang-es [data-lang-es]{display:revert}
+/* Lang system — canonical scheme (scales to N languages) */
+[data-lang]{display:none}
+body[data-active-lang="en"] [data-lang="en"],
+body[data-active-lang="es"] [data-lang="es"],
+body[data-active-lang="fr"] [data-lang="fr"]{display:revert}
 
 @media(max-width:768px){
   header{padding:0.75rem 1rem !important;flex-direction:column !important;gap:0.5rem !important;align-items:center !important}
@@ -90,16 +91,16 @@ body.lang-es [data-lang-es]{display:revert}
 }
 </style>
 </head>
-<body>
+<body data-active-lang="en">
 <header>
   <a href="/" class="logo"><img src="/logo_banner.png" alt="Expat Advisor MX" style="height:36px;"></a>
   <nav style="display:flex;align-items:center;flex-wrap:wrap">
-    <a href="/#services" data-lang-en>Services</a>
-    <a href="/#services" data-lang-es>Servicios</a>
-    <a href="/#contact" data-lang-en>Contact</a>
-    <a href="/#contact" data-lang-es>Contacto</a>
-    <a href="/blog/" data-lang-en>Blog</a>
-    <a href="/blog/" data-lang-es>Blog</a>
+    <a href="/#services" data-lang="en">Services</a>
+    <a href="/#services" data-lang="es">Servicios</a>
+    <a href="/#contact" data-lang="en">Contact</a>
+    <a href="/#contact" data-lang="es">Contacto</a>
+    <a href="/blog/" data-lang="en">Blog</a>
+    <a href="/blog/" data-lang="es">Blog</a>
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
@@ -110,116 +111,116 @@ body.lang-es [data-lang-es]{display:revert}
 <img src="/blog/images/corporation-vs-individual-fideicomiso-hero.jpg" alt="Two formal legal folders with corporate seals beside a personal property document on a lawyer's desk" class="hero-img"/>
 
 <div class="article-wrap">
-  <a href="/blog/" class="back-link" data-lang-en>← Back to Blog</a>
-  <a href="/blog/" class="back-link" data-lang-es>← Volver al Blog</a>
+  <a href="/blog/" class="back-link" data-lang="en">← Back to Blog</a>
+  <a href="/blog/" class="back-link" data-lang="es">← Volver al Blog</a>
 
-  <span class="article-tag" data-lang-en>Real Estate</span>
-  <span class="article-tag" data-lang-es>Bienes Raíces</span>
+  <span class="article-tag" data-lang="en">Real Estate</span>
+  <span class="article-tag" data-lang="es">Bienes Raíces</span>
 
-  <div class="article-meta" data-lang-en>May 26, 2026 &nbsp;·&nbsp; Rolando Romero García &nbsp;·&nbsp; 12 min read</div>
-  <div class="article-meta" data-lang-es>26 de mayo de 2026 &nbsp;·&nbsp; Rolando Romero García &nbsp;·&nbsp; 12 min de lectura</div>
+  <div class="article-meta" data-lang="en">May 26, 2026 &nbsp;·&nbsp; Rolando Romero García &nbsp;·&nbsp; 12 min read</div>
+  <div class="article-meta" data-lang="es">26 de mayo de 2026 &nbsp;·&nbsp; Rolando Romero García &nbsp;·&nbsp; 12 min de lectura</div>
 
-  <h1 data-lang-en>Buying Property in Mexico Through Your LLC or Corporation: What Your Accountant Won't Tell You</h1>
-  <h1 data-lang-es>Comprar en México con tu LLC o Corporación: Lo que tu Contador No te Dirá</h1>
+  <h1 data-lang="en">Buying Property in Mexico Through Your LLC or Corporation: What Your Accountant Won't Tell You</h1>
+  <h1 data-lang="es">Comprar en México con tu LLC o Corporación: Lo que tu Contador No te Dirá</h1>
 
   <!-- INTRO -->
-  <p data-lang-en>Every so often I get the same inquiry: a Canadian with an Inc., or an American with an LLC, whose accountant told them to buy the condo in Puerto Vallarta under their company's name. "That way you deduct the trips, depreciate the property, and keep the money working inside the corporation." It sounds logical. It sounds elegant. And in many cases, it's about to cost the buyer tens of thousands of dollars in taxes they didn't have to pay.</p>
-  <p data-lang-es>Cada cierto tiempo me llega la misma consulta: un canadiense con una Inc., o un americano con una LLC, cuyo contador le dijo que comprara el departamento en Puerto Vallarta a nombre de la empresa. "Así deduces los viajes, deprecias el inmueble, y el dinero trabaja sin salir de la corporación." Suena lógico. Suena elegante. Y en muchos casos está a punto de costarle al comprador decenas de miles de dólares en impuestos que no tenía que pagar.</p>
-  <p data-lang-en>This isn't an isolated case. Every year I get three or four identical inquiries: Americans with LLCs, Canadians with Inc.s, the occasional European with a Delaware structure they were sold as "tax-efficient." They all come with the same idea: buy in Mexico through their foreign company because their accountant—who has never closed a real estate transaction in Mexico—told them it was better.</p>
-  <p data-lang-es>No es un caso aislado. Cada año me llegan tres o cuatro consultas idénticas: americanos con LLCs, canadienses con Inc., algún europeo con una estructura en Delaware que le vendieron como "fiscalmente eficiente." Todos vienen con la misma idea: comprar en México a través de su empresa extranjera porque su contador —que jamás ha hecho una operación inmobiliaria en México— les dijo que era mejor.</p>
-  <p data-lang-en>Sometimes it is better. Most of the time it isn't. And the difference between one case and another isn't where you think it is.</p>
-  <p data-lang-es>A veces es mejor. La mayoría de las veces no lo es. Y la diferencia entre uno y otro caso no está donde crees que está.</p>
+  <p data-lang="en">Every so often I get the same inquiry: a Canadian with an Inc., or an American with an LLC, whose accountant told them to buy the condo in Puerto Vallarta under their company's name. "That way you deduct the trips, depreciate the property, and keep the money working inside the corporation." It sounds logical. It sounds elegant. And in many cases, it's about to cost the buyer tens of thousands of dollars in taxes they didn't have to pay.</p>
+  <p data-lang="es">Cada cierto tiempo me llega la misma consulta: un canadiense con una Inc., o un americano con una LLC, cuyo contador le dijo que comprara el departamento en Puerto Vallarta a nombre de la empresa. "Así deduces los viajes, deprecias el inmueble, y el dinero trabaja sin salir de la corporación." Suena lógico. Suena elegante. Y en muchos casos está a punto de costarle al comprador decenas de miles de dólares en impuestos que no tenía que pagar.</p>
+  <p data-lang="en">This isn't an isolated case. Every year I get three or four identical inquiries: Americans with LLCs, Canadians with Inc.s, the occasional European with a Delaware structure they were sold as "tax-efficient." They all come with the same idea: buy in Mexico through their foreign company because their accountant—who has never closed a real estate transaction in Mexico—told them it was better.</p>
+  <p data-lang="es">No es un caso aislado. Cada año me llegan tres o cuatro consultas idénticas: americanos con LLCs, canadienses con Inc., algún europeo con una estructura en Delaware que le vendieron como "fiscalmente eficiente." Todos vienen con la misma idea: comprar en México a través de su empresa extranjera porque su contador —que jamás ha hecho una operación inmobiliaria en México— les dijo que era mejor.</p>
+  <p data-lang="en">Sometimes it is better. Most of the time it isn't. And the difference between one case and another isn't where you think it is.</p>
+  <p data-lang="es">A veces es mejor. La mayoría de las veces no lo es. Y la diferencia entre uno y otro caso no está donde crees que está.</p>
 
   <!-- SECTION: four options -->
-  <h2 data-lang-en>The four real options</h2>
-  <h2 data-lang-es>Las cuatro opciones reales</h2>
-  <p data-lang-en>When a foreigner wants to buy property in Mexico's restricted zone—the entire 50-kilometer coastal strip, including Puerto Vallarta and Riviera Nayarit—there are four paths:</p>
-  <p data-lang-es>Cuando un extranjero quiere comprar propiedad en zona restringida de México —toda la franja costera de 50 kilómetros, incluyendo Puerto Vallarta y Riviera Nayarit—, tiene cuatro caminos:</p>
-  <p data-lang-en><strong>1. Personal bank trust (fideicomiso).</strong> The Mexican bank is the legal owner; you are the beneficiary with full rights to use, rent, sell, and bequeath. This is the standard structure for 90% of foreign buyers. You can designate substitute beneficiaries, which greatly simplifies succession.</p>
-  <p data-lang-es><strong>1. Fideicomiso a nombre personal.</strong> El banco mexicano es propietario legal; tú eres beneficiario con todos los derechos de uso, renta, venta y herencia. Es la estructura estándar para el 90% de los compradores extranjeros. Puedes designar beneficiarios sustitutos, lo que simplifica enormemente la sucesión.</p>
-  <p data-lang-en><strong>2. U.S. LLC as trust beneficiary.</strong> Same as above, but the beneficiary is your LLC instead of you personally. The trust is still required because, under Mexican law, the LLC is a foreign legal entity subject to the same constitutional restriction as a foreign individual.</p>
-  <p data-lang-es><strong>2. LLC estadounidense como beneficiaria del fideicomiso.</strong> Igual que arriba, pero el beneficiario es tu LLC en vez de ti personalmente. El fideicomiso sigue siendo obligatorio porque, para el derecho mexicano, la LLC es una persona moral extranjera sujeta a la misma restricción constitucional que una persona física extranjera.</p>
-  <p data-lang-en><strong>3. Canadian corporation (Inc.) as trust beneficiary.</strong> Same mechanism, but with very different tax implications in Canada that I'll explain below.</p>
-  <p data-lang-es><strong>3. Corporación canadiense (Inc.) como beneficiaria del fideicomiso.</strong> Mismo mecanismo, pero con implicaciones fiscales muy distintas en Canadá que explicaré adelante.</p>
-  <p data-lang-en><strong>4. Mexican subsidiary (SA de CV, SRL de CV) as direct owner.</strong> The subsidiary is a Mexican legal entity, so it can own directly without a trust. Your foreign company is a shareholder of the Mexican one.</p>
-  <p data-lang-es><strong>4. Subsidiaria mexicana (SA de CV, SRL de CV) como propietaria directa.</strong> La subsidiaria es persona moral mexicana, así que puede ser dueña sin fideicomiso. Tu empresa extranjera es accionista de la mexicana.</p>
-  <p data-lang-en>Each option has its logic. And each has traps that your accountant in Dallas or Toronto probably doesn't know about.</p>
-  <p data-lang-es>Cada opción tiene su lógica. Y cada una tiene trampas que tu contador en Dallas o Toronto probablemente no conoce.</p>
+  <h2 data-lang="en">The four real options</h2>
+  <h2 data-lang="es">Las cuatro opciones reales</h2>
+  <p data-lang="en">When a foreigner wants to buy property in Mexico's restricted zone—the entire 50-kilometer coastal strip, including Puerto Vallarta and Riviera Nayarit—there are four paths:</p>
+  <p data-lang="es">Cuando un extranjero quiere comprar propiedad en zona restringida de México —toda la franja costera de 50 kilómetros, incluyendo Puerto Vallarta y Riviera Nayarit—, tiene cuatro caminos:</p>
+  <p data-lang="en"><strong>1. Personal bank trust (fideicomiso).</strong> The Mexican bank is the legal owner; you are the beneficiary with full rights to use, rent, sell, and bequeath. This is the standard structure for 90% of foreign buyers. You can designate substitute beneficiaries, which greatly simplifies succession.</p>
+  <p data-lang="es"><strong>1. Fideicomiso a nombre personal.</strong> El banco mexicano es propietario legal; tú eres beneficiario con todos los derechos de uso, renta, venta y herencia. Es la estructura estándar para el 90% de los compradores extranjeros. Puedes designar beneficiarios sustitutos, lo que simplifica enormemente la sucesión.</p>
+  <p data-lang="en"><strong>2. U.S. LLC as trust beneficiary.</strong> Same as above, but the beneficiary is your LLC instead of you personally. The trust is still required because, under Mexican law, the LLC is a foreign legal entity subject to the same constitutional restriction as a foreign individual.</p>
+  <p data-lang="es"><strong>2. LLC estadounidense como beneficiaria del fideicomiso.</strong> Igual que arriba, pero el beneficiario es tu LLC en vez de ti personalmente. El fideicomiso sigue siendo obligatorio porque, para el derecho mexicano, la LLC es una persona moral extranjera sujeta a la misma restricción constitucional que una persona física extranjera.</p>
+  <p data-lang="en"><strong>3. Canadian corporation (Inc.) as trust beneficiary.</strong> Same mechanism, but with very different tax implications in Canada that I'll explain below.</p>
+  <p data-lang="es"><strong>3. Corporación canadiense (Inc.) como beneficiaria del fideicomiso.</strong> Mismo mecanismo, pero con implicaciones fiscales muy distintas en Canadá que explicaré adelante.</p>
+  <p data-lang="en"><strong>4. Mexican subsidiary (SA de CV, SRL de CV) as direct owner.</strong> The subsidiary is a Mexican legal entity, so it can own directly without a trust. Your foreign company is a shareholder of the Mexican one.</p>
+  <p data-lang="es"><strong>4. Subsidiaria mexicana (SA de CV, SRL de CV) como propietaria directa.</strong> La subsidiaria es persona moral mexicana, así que puede ser dueña sin fideicomiso. Tu empresa extranjera es accionista de la mexicana.</p>
+  <p data-lang="en">Each option has its logic. And each has traps that your accountant in Dallas or Toronto probably doesn't know about.</p>
+  <p data-lang="es">Cada opción tiene su lógica. Y cada una tiene trampas que tu contador en Dallas o Toronto probablemente no conoce.</p>
 
   <!-- SECTION: Canadian trap -->
-  <h2 data-lang-en>The Canadian trap: FAPI and the penalty on passive income</h2>
-  <h2 data-lang-es>La trampa canadiense: FAPI y el castigo al ingreso pasivo</h2>
-  <p data-lang-en>If you're a Canadian with an Inc. and you have retained earnings you don't want to distribute, your accountant probably told you to use that capital to buy a condo in Puerto Vallarta. The logic sounds good: the money works, you generate rental income, and you don't pay dividend distribution tax until you decide to take it out. The problem is that logic works differently depending on how you structure the purchase—and the structure that seems most "sophisticated" is precisely the one that hurts you the most fiscally.</p>
-  <p data-lang-es>Si eres canadiense con una Inc. y tienes utilidades retenidas que no quieres distribuir, probablemente tu contador te dijo que uses ese capital para comprar un departamento en Puerto Vallarta. La lógica suena bien: el dinero trabaja, generas renta, y no pagas impuesto de distribución de dividendos hasta que decidas sacarlo. El problema es que esa lógica funciona diferente dependiendo de cómo estructures la compra — y la estructura que parece más "sofisticada" es precisamente la que más te perjudica fiscalmente.</p>
-  <p data-lang-en><strong>The option that seems smart but isn't: creating a Mexican subsidiary.</strong></p>
-  <p data-lang-es><strong>La opción que parece inteligente pero no lo es: crear una subsidiaria mexicana.</strong></p>
-  <p data-lang-en>Some Canadian accountants recommend creating an SA de CV or SRL de CV in Mexico, where your Canadian Inc. is the shareholder. The Mexican subsidiary buys the condo directly (no trust needed because it's a Mexican legal entity), and the rental income stays in Mexico "protected" from Canadian taxes.</p>
-  <p data-lang-es>Algunos contadores canadienses recomiendan crear una SA de CV o SRL de CV en México, donde tu Inc. canadiense sea accionista. La subsidiaria mexicana compra el departamento directamente (sin fideicomiso porque es persona moral mexicana), y las rentas se quedan en México "protegidas" de impuestos canadienses.</p>
-  <p data-lang-en>False. This is where FAPI comes in.</p>
-  <p data-lang-es>Falso. Aquí entra FAPI.</p>
-  <p data-lang-en>FAPI stands for Foreign Accrual Property Income—a rule from the CRA contained in sections 91 to 95 of the ITA (Income Tax Act). The rule says: if your Canadian corporation controls a <strong>foreign company</strong> that generates passive income, that income is attributed to your Inc. and taxed in Canada every year, even if you never distribute it. The Mexican subsidiary qualifies as a "Controlled Foreign Affiliate" and rental income is passive income. To escape FAPI, you would need to demonstrate that the subsidiary is an "active business" under section 95(2)—which typically requires more than five full-time employees (meaning a minimum of six). Absurd for a single vacation rental condo.</p>
-  <p data-lang-es>FAPI significa Foreign Accrual Property Income — una regla del CRA contenida en las secciones 91 a 95 de la ITA (Income Tax Act). La regla dice: si tu corporación canadiense controla una <strong>empresa extranjera</strong> que genera ingreso pasivo, ese ingreso se atribuye a tu Inc. y se grava en Canadá cada año, aunque nunca lo distribuyas. La subsidiaria mexicana califica como "Controlled Foreign Affiliate" y el ingreso por renta es ingreso pasivo. Para escapar de FAPI tendrías que demostrar que la subsidiaria es un "negocio activo" bajo la sección 95(2) — lo cual típicamente requiere más de cinco empleados de tiempo completo (mínimo seis). Absurdo para un solo departamento de renta vacacional.</p>
-  <p data-lang-en>The result: you pay taxes in Canada every year on the condo's rental income even though that income never leaves Mexico. Exactly the opposite of what you wanted to achieve.</p>
-  <p data-lang-es>El resultado: pagas impuestos en Canadá cada año sobre la renta del departamento aunque esa renta nunca salga de México. Exactamente lo contrario de lo que querías lograr.</p>
-  <p data-lang-en><strong>The option that seems simple and turns out to be correct: direct trust.</strong></p>
-  <p data-lang-es><strong>La opción que parece simple y resulta ser la correcta: fideicomiso directo.</strong></p>
-  <p data-lang-en>If instead of creating a Mexican subsidiary you simply make your Canadian Inc. the beneficiary of a Mexican bank trust, FAPI doesn't apply. Why? Because the trust is not a "foreign corporation with share capital"—which is what section 95(1) of the ITA requires to trigger FAPI. The income flows as "foreign property income" and is reported on your T2 with credit for taxes paid in Mexico.</p>
-  <p data-lang-es>Si en vez de crear subsidiaria mexicana simplemente pones a tu Inc. canadiense como beneficiaria de un fideicomiso bancario mexicano, FAPI no aplica. ¿Por qué? Porque el fideicomiso no es una "corporación extranjera con capital accionario" — que es lo que la sección 95(1) de la ITA requiere para activar FAPI. El ingreso fluye como "foreign property income" y se reporta en tu T2 con crédito por los impuestos pagados en México.</p>
-  <p data-lang-en>But don't celebrate yet. There are three additional traps that many ignore:</p>
-  <p data-lang-es>Pero no cantes victoria todavía. Hay tres trampas adicionales que muchos ignoran:</p>
-  <p data-lang-en><strong>First trap: the penalty on passive income in CCPCs.</strong> If your Inc. is a CCPC (Canadian-Controlled Private Corporation), passive investment income is subject to combined tax burdens that can reach approximately 50% in most provinces—resulting from adding the base federal tax, the 10.67% surcharge under Section 123.3, and provincial tax. There's a partial refund mechanism (RDTOH) when you pay dividends, but the net effect is that retaining passive income inside a CCPC isn't as advantageous as it seems. The Canadian system is designed to discourage exactly what you wanted to do.</p>
-  <p data-lang-es><strong>Primera trampa: el castigo al ingreso pasivo en CCPCs.</strong> Si tu Inc. es una CCPC (Canadian-Controlled Private Corporation), el ingreso pasivo de inversión está sujeto a cargas fiscales combinadas que pueden alcanzar aproximadamente el 50% en la mayoría de las provincias — resultado de sumar el impuesto federal base, el recargo del 10.67% bajo Section 123.3, y el impuesto provincial. Existe un mecanismo de reembolso parcial (RDTOH) cuando pagas dividendos, pero el efecto neto es que retener ingresos pasivos dentro de una CCPC no es tan ventajoso como parece. El sistema canadiense está diseñado para desalentar exactamente lo que querías hacer.</p>
-  <p data-lang-en><strong>Second trap: Section 94 (Non-Resident Trusts).</strong> Although the Mexican trust escapes FAPI, it may fall under a different regime. If the Canadian beneficiary is a "resident contributor" or "resident beneficiary" of a foreign trust, that trust may be treated as a Canadian resident for tax purposes. This is a parallel risk that should be analyzed with a specialized Canadian accountant.</p>
-  <p data-lang-es><strong>Segunda trampa: Section 94 (Non-Resident Trusts).</strong> Aunque el fideicomiso mexicano escape de FAPI, puede caer bajo otro régimen. Si el beneficiario canadiense es "resident contributor" o "resident beneficiary" de un fideicomiso extranjero, ese fideicomiso puede ser tratado como residente canadiense para efectos fiscales. Es un riesgo paralelo que debe analizarse con un contador canadiense especializado.</p>
-  <p data-lang-en><strong>Third trap: shareholder benefit.</strong> Under section 15(1) of the ITA—and confirmed by Section 15(7) for its extraterritorial application—if your Inc. owns the condo (via trust or subsidiary) and you use it personally without paying market rent, the CRA can impute personal income equal to the fair market value of that use. With no deduction for the company. It's an aggressive rule and the CRA actively enforces it.</p>
-  <p data-lang-es><strong>Tercera trampa: shareholder benefit.</strong> Bajo la sección 15(1) de la ITA — y confirmado por la Section 15(7) para su aplicación extraterritorial —, si tu Inc. es dueña del departamento (vía fideicomiso o subsidiaria) y tú lo usas personalmente sin pagar renta de mercado, el CRA puede imputarte un ingreso personal equivalente al valor de mercado de ese uso. Sin derecho a deducción para la empresa. Es una regla agresiva y el CRA la aplica activamente.</p>
-  <p data-lang-en><strong>The summary for Canadians:</strong> The Mexican subsidiary is the worst option—it triggers FAPI and hurts you the most fiscally. The direct trust is better but not perfect—you escape FAPI but face the penalty on passive income for CCPCs, the possible Section 94 risk, and shareholder benefit if you use the property. The accountant who told you "buy with your company" without explaining all this probably has never closed a transaction in Mexico.</p>
-  <p data-lang-es><strong>El resumen para canadienses:</strong> La subsidiaria mexicana es la peor opción — activa FAPI y es la que más te perjudica fiscalmente. El fideicomiso directo es mejor pero no perfecto — escapas de FAPI pero enfrentas el castigo al ingreso pasivo de CCPCs, el posible riesgo de Section 94, y el shareholder benefit si usas la propiedad. El contador que te dijo "compra con tu empresa" sin explicarte todo esto probablemente nunca ha cerrado una operación en México.</p>
+  <h2 data-lang="en">The Canadian trap: FAPI and the penalty on passive income</h2>
+  <h2 data-lang="es">La trampa canadiense: FAPI y el castigo al ingreso pasivo</h2>
+  <p data-lang="en">If you're a Canadian with an Inc. and you have retained earnings you don't want to distribute, your accountant probably told you to use that capital to buy a condo in Puerto Vallarta. The logic sounds good: the money works, you generate rental income, and you don't pay dividend distribution tax until you decide to take it out. The problem is that logic works differently depending on how you structure the purchase—and the structure that seems most "sophisticated" is precisely the one that hurts you the most fiscally.</p>
+  <p data-lang="es">Si eres canadiense con una Inc. y tienes utilidades retenidas que no quieres distribuir, probablemente tu contador te dijo que uses ese capital para comprar un departamento en Puerto Vallarta. La lógica suena bien: el dinero trabaja, generas renta, y no pagas impuesto de distribución de dividendos hasta que decidas sacarlo. El problema es que esa lógica funciona diferente dependiendo de cómo estructures la compra — y la estructura que parece más "sofisticada" es precisamente la que más te perjudica fiscalmente.</p>
+  <p data-lang="en"><strong>The option that seems smart but isn't: creating a Mexican subsidiary.</strong></p>
+  <p data-lang="es"><strong>La opción que parece inteligente pero no lo es: crear una subsidiaria mexicana.</strong></p>
+  <p data-lang="en">Some Canadian accountants recommend creating an SA de CV or SRL de CV in Mexico, where your Canadian Inc. is the shareholder. The Mexican subsidiary buys the condo directly (no trust needed because it's a Mexican legal entity), and the rental income stays in Mexico "protected" from Canadian taxes.</p>
+  <p data-lang="es">Algunos contadores canadienses recomiendan crear una SA de CV o SRL de CV en México, donde tu Inc. canadiense sea accionista. La subsidiaria mexicana compra el departamento directamente (sin fideicomiso porque es persona moral mexicana), y las rentas se quedan en México "protegidas" de impuestos canadienses.</p>
+  <p data-lang="en">False. This is where FAPI comes in.</p>
+  <p data-lang="es">Falso. Aquí entra FAPI.</p>
+  <p data-lang="en">FAPI stands for Foreign Accrual Property Income—a rule from the CRA contained in sections 91 to 95 of the ITA (Income Tax Act). The rule says: if your Canadian corporation controls a <strong>foreign company</strong> that generates passive income, that income is attributed to your Inc. and taxed in Canada every year, even if you never distribute it. The Mexican subsidiary qualifies as a "Controlled Foreign Affiliate" and rental income is passive income. To escape FAPI, you would need to demonstrate that the subsidiary is an "active business" under section 95(2)—which typically requires more than five full-time employees (meaning a minimum of six). Absurd for a single vacation rental condo.</p>
+  <p data-lang="es">FAPI significa Foreign Accrual Property Income — una regla del CRA contenida en las secciones 91 a 95 de la ITA (Income Tax Act). La regla dice: si tu corporación canadiense controla una <strong>empresa extranjera</strong> que genera ingreso pasivo, ese ingreso se atribuye a tu Inc. y se grava en Canadá cada año, aunque nunca lo distribuyas. La subsidiaria mexicana califica como "Controlled Foreign Affiliate" y el ingreso por renta es ingreso pasivo. Para escapar de FAPI tendrías que demostrar que la subsidiaria es un "negocio activo" bajo la sección 95(2) — lo cual típicamente requiere más de cinco empleados de tiempo completo (mínimo seis). Absurdo para un solo departamento de renta vacacional.</p>
+  <p data-lang="en">The result: you pay taxes in Canada every year on the condo's rental income even though that income never leaves Mexico. Exactly the opposite of what you wanted to achieve.</p>
+  <p data-lang="es">El resultado: pagas impuestos en Canadá cada año sobre la renta del departamento aunque esa renta nunca salga de México. Exactamente lo contrario de lo que querías lograr.</p>
+  <p data-lang="en"><strong>The option that seems simple and turns out to be correct: direct trust.</strong></p>
+  <p data-lang="es"><strong>La opción que parece simple y resulta ser la correcta: fideicomiso directo.</strong></p>
+  <p data-lang="en">If instead of creating a Mexican subsidiary you simply make your Canadian Inc. the beneficiary of a Mexican bank trust, FAPI doesn't apply. Why? Because the trust is not a "foreign corporation with share capital"—which is what section 95(1) of the ITA requires to trigger FAPI. The income flows as "foreign property income" and is reported on your T2 with credit for taxes paid in Mexico.</p>
+  <p data-lang="es">Si en vez de crear subsidiaria mexicana simplemente pones a tu Inc. canadiense como beneficiaria de un fideicomiso bancario mexicano, FAPI no aplica. ¿Por qué? Porque el fideicomiso no es una "corporación extranjera con capital accionario" — que es lo que la sección 95(1) de la ITA requiere para activar FAPI. El ingreso fluye como "foreign property income" y se reporta en tu T2 con crédito por los impuestos pagados en México.</p>
+  <p data-lang="en">But don't celebrate yet. There are three additional traps that many ignore:</p>
+  <p data-lang="es">Pero no cantes victoria todavía. Hay tres trampas adicionales que muchos ignoran:</p>
+  <p data-lang="en"><strong>First trap: the penalty on passive income in CCPCs.</strong> If your Inc. is a CCPC (Canadian-Controlled Private Corporation), passive investment income is subject to combined tax burdens that can reach approximately 50% in most provinces—resulting from adding the base federal tax, the 10.67% surcharge under Section 123.3, and provincial tax. There's a partial refund mechanism (RDTOH) when you pay dividends, but the net effect is that retaining passive income inside a CCPC isn't as advantageous as it seems. The Canadian system is designed to discourage exactly what you wanted to do.</p>
+  <p data-lang="es"><strong>Primera trampa: el castigo al ingreso pasivo en CCPCs.</strong> Si tu Inc. es una CCPC (Canadian-Controlled Private Corporation), el ingreso pasivo de inversión está sujeto a cargas fiscales combinadas que pueden alcanzar aproximadamente el 50% en la mayoría de las provincias — resultado de sumar el impuesto federal base, el recargo del 10.67% bajo Section 123.3, y el impuesto provincial. Existe un mecanismo de reembolso parcial (RDTOH) cuando pagas dividendos, pero el efecto neto es que retener ingresos pasivos dentro de una CCPC no es tan ventajoso como parece. El sistema canadiense está diseñado para desalentar exactamente lo que querías hacer.</p>
+  <p data-lang="en"><strong>Second trap: Section 94 (Non-Resident Trusts).</strong> Although the Mexican trust escapes FAPI, it may fall under a different regime. If the Canadian beneficiary is a "resident contributor" or "resident beneficiary" of a foreign trust, that trust may be treated as a Canadian resident for tax purposes. This is a parallel risk that should be analyzed with a specialized Canadian accountant.</p>
+  <p data-lang="es"><strong>Segunda trampa: Section 94 (Non-Resident Trusts).</strong> Aunque el fideicomiso mexicano escape de FAPI, puede caer bajo otro régimen. Si el beneficiario canadiense es "resident contributor" o "resident beneficiary" de un fideicomiso extranjero, ese fideicomiso puede ser tratado como residente canadiense para efectos fiscales. Es un riesgo paralelo que debe analizarse con un contador canadiense especializado.</p>
+  <p data-lang="en"><strong>Third trap: shareholder benefit.</strong> Under section 15(1) of the ITA—and confirmed by Section 15(7) for its extraterritorial application—if your Inc. owns the condo (via trust or subsidiary) and you use it personally without paying market rent, the CRA can impute personal income equal to the fair market value of that use. With no deduction for the company. It's an aggressive rule and the CRA actively enforces it.</p>
+  <p data-lang="es"><strong>Tercera trampa: shareholder benefit.</strong> Bajo la sección 15(1) de la ITA — y confirmado por la Section 15(7) para su aplicación extraterritorial —, si tu Inc. es dueña del departamento (vía fideicomiso o subsidiaria) y tú lo usas personalmente sin pagar renta de mercado, el CRA puede imputarte un ingreso personal equivalente al valor de mercado de ese uso. Sin derecho a deducción para la empresa. Es una regla agresiva y el CRA la aplica activamente.</p>
+  <p data-lang="en"><strong>The summary for Canadians:</strong> The Mexican subsidiary is the worst option—it triggers FAPI and hurts you the most fiscally. The direct trust is better but not perfect—you escape FAPI but face the penalty on passive income for CCPCs, the possible Section 94 risk, and shareholder benefit if you use the property. The accountant who told you "buy with your company" without explaining all this probably has never closed a transaction in Mexico.</p>
+  <p data-lang="es"><strong>El resumen para canadienses:</strong> La subsidiaria mexicana es la peor opción — activa FAPI y es la que más te perjudica fiscalmente. El fideicomiso directo es mejor pero no perfecto — escapas de FAPI pero enfrentas el castigo al ingreso pasivo de CCPCs, el posible riesgo de Section 94, y el shareholder benefit si usas la propiedad. El contador que te dijo "compra con tu empresa" sin explicarte todo esto probablemente nunca ha cerrado una operación en México.</p>
 
   <!-- SECTION: American trap -->
-  <h2 data-lang-en>The American trap: Personal use and reporting</h2>
-  <h2 data-lang-es>La trampa americana: Uso personal y reportes</h2>
-  <p data-lang-en>Americans with LLCs have a different path, but not one free of complications.</p>
-  <p data-lang-es>Los estadounidenses con LLCs tienen un camino diferente, pero no libre de complicaciones.</p>
-  <p data-lang-en>The typical single-member LLC is a "disregarded entity" for the IRS—it's not treated as a separate entity from the owner for federal tax purposes. Income passes directly to the owner and is taxed on their personal return. This avoids the double taxation that corporations face.</p>
-  <p data-lang-es>La LLC típica de un solo miembro es "disregarded entity" para el IRS — no se trata como entidad separada del dueño para efectos del impuesto federal. El ingreso pasa directo al dueño y se grava en su declaración personal. Eso evita la doble tributación que enfrentan las corporaciones.</p>
-  <p data-lang-en>But the fact that the LLC is fiscally transparent doesn't mean you can do whatever you want. If you use the property personally, you must clearly separate personal-use days from commercial rental days, because the IRS's "vacation home" rules (section 280A of the Internal Revenue Code) limit what expenses you can deduct based on the proportion of use. If personal use exceeds certain thresholds, the property gets reclassified and you lose deductions.</p>
-  <p data-lang-es>Pero el hecho de que la LLC sea transparente fiscalmente no significa que puedas hacer lo que quieras. Si usas la propiedad personalmente, debes separar claramente los días de uso personal de los días de renta comercial, porque las reglas de "vacation home" del IRS (sección 280A del Internal Revenue Code) limitan qué gastos puedes deducir según la proporción de uso. Si el uso personal excede ciertos umbrales, la propiedad se reclasifica y pierdes deducciones.</p>
-  <p data-lang-en>Additionally, there are reporting obligations many people ignore. FBAR (FinCEN 114) applies if you have foreign bank accounts with an aggregate balance over $10,000—the property itself isn't a financial account, but the account where you deposit rents is. Form 8938 (FATCA) applies to foreign financial assets above certain thresholds; the property itself isn't a financial asset for FATCA, but the Mexican bank accounts where you deposit rents are.</p>
-  <p data-lang-es>Además, hay obligaciones de reporte que muchos ignoran. FBAR (FinCEN 114) aplica si tienes cuentas bancarias extranjeras con saldo agregado mayor a $10,000 — la propiedad en sí no es cuenta financiera, pero la cuenta donde depositas las rentas sí lo es. Form 8938 (FATCA) aplica a activos financieros extranjeros según ciertos umbrales; el inmueble en sí mismo no es un activo financiero para FATCA, pero las cuentas bancarias mexicanas donde depositas las rentas sí lo son.</p>
-  <p data-lang-en>And here's an important point about the Mexican trust: treatment as a "Foreign Trust" for the IRS depends on the specific structure. Under Revenue Ruling 2013-14, certain trusts where the trustee bank has no powers beyond holding legal title to the property may qualify as agency relationships rather than foreign trusts, in which case Forms 3520 and 3520-A are not required. However, if the trust grants the bank any additional powers, the ruling doesn't apply and the reporting obligation is reactivated. The classification isn't automatic and should be confirmed with a CPA specializing in international structures.</p>
-  <p data-lang-es>Y aquí viene un punto importante sobre el fideicomiso mexicano: el tratamiento como "Foreign Trust" para el IRS depende de la estructura específica. Bajo el Revenue Ruling 2013-14, ciertos fideicomisos donde el banco fiduciario no tiene facultades más allá de mantener el título legal de la propiedad pueden calificar como relaciones de agencia (agency relationships) y no como foreign trusts, en cuyo caso no se requieren los Formularios 3520 y 3520-A. Sin embargo, si el fideicomiso otorga al banco cualquier facultad adicional, el ruling no aplica y la obligación de reportar se reactiva. La clasificación no es automática y debe confirmarse con un CPA especializado en estructuras internacionales.</p>
-  <p data-lang-en>If the trust does qualify as a Foreign Trust, penalties for not filing Form 3520 vary by type of violation: for transfers to the trust or distributions received (IRC §6048(a) and (c)), the penalty is $10,000 or 35% of the gross reportable amount, whichever is greater; for the annual Form 3520-A report (IRC §6048(b)), the penalty is $10,000 or 5% of the gross reportable amount. Note: as of 2025, the IRS announced it will no longer impose automatic penalties for late filing of Form 3520 if a reasonable cause statement is attached, though this doesn't eliminate the risk entirely. The conservative position remains to assume it applies until you confirm otherwise.</p>
-  <p data-lang-es>Si el fideicomiso sí califica como Foreign Trust, las penalidades por no presentar Form 3520 varían según el tipo de incumplimiento: para transferencias al fideicomiso o distribuciones recibidas (IRC §6048(a) y (c)), la penalidad es $10,000 o el 35% del monto bruto reportable, lo que sea mayor; para el reporte anual Form 3520-A (IRC §6048(b)), la penalidad es $10,000 o el 5% del monto bruto reportable. Nota: a partir de 2025, el IRS anunció que ya no impondrá penalidades automáticas por presentación tardía del Form 3520 si se adjunta declaración de causa razonable, aunque esto no elimina el riesgo por completo. La posición conservadora sigue siendo asumir que aplica hasta confirmar lo contrario.</p>
-  <p data-lang-en>I've seen clients who "forget" to mention the Mexican condo to their accountant and then have serious problems with the IRS. Not through intentional evasion—through simple ignorance of reporting rules.</p>
-  <p data-lang-es>Me ha tocado ver clientes que "olvidan" mencionar el departamento en México a su contador y luego tienen problemas serios con el IRS. No por evasión intencional — por simple desconocimiento de las reglas de reporte.</p>
+  <h2 data-lang="en">The American trap: Personal use and reporting</h2>
+  <h2 data-lang="es">La trampa americana: Uso personal y reportes</h2>
+  <p data-lang="en">Americans with LLCs have a different path, but not one free of complications.</p>
+  <p data-lang="es">Los estadounidenses con LLCs tienen un camino diferente, pero no libre de complicaciones.</p>
+  <p data-lang="en">The typical single-member LLC is a "disregarded entity" for the IRS—it's not treated as a separate entity from the owner for federal tax purposes. Income passes directly to the owner and is taxed on their personal return. This avoids the double taxation that corporations face.</p>
+  <p data-lang="es">La LLC típica de un solo miembro es "disregarded entity" para el IRS — no se trata como entidad separada del dueño para efectos del impuesto federal. El ingreso pasa directo al dueño y se grava en su declaración personal. Eso evita la doble tributación que enfrentan las corporaciones.</p>
+  <p data-lang="en">But the fact that the LLC is fiscally transparent doesn't mean you can do whatever you want. If you use the property personally, you must clearly separate personal-use days from commercial rental days, because the IRS's "vacation home" rules (section 280A of the Internal Revenue Code) limit what expenses you can deduct based on the proportion of use. If personal use exceeds certain thresholds, the property gets reclassified and you lose deductions.</p>
+  <p data-lang="es">Pero el hecho de que la LLC sea transparente fiscalmente no significa que puedas hacer lo que quieras. Si usas la propiedad personalmente, debes separar claramente los días de uso personal de los días de renta comercial, porque las reglas de "vacation home" del IRS (sección 280A del Internal Revenue Code) limitan qué gastos puedes deducir según la proporción de uso. Si el uso personal excede ciertos umbrales, la propiedad se reclasifica y pierdes deducciones.</p>
+  <p data-lang="en">Additionally, there are reporting obligations many people ignore. FBAR (FinCEN 114) applies if you have foreign bank accounts with an aggregate balance over $10,000—the property itself isn't a financial account, but the account where you deposit rents is. Form 8938 (FATCA) applies to foreign financial assets above certain thresholds; the property itself isn't a financial asset for FATCA, but the Mexican bank accounts where you deposit rents are.</p>
+  <p data-lang="es">Además, hay obligaciones de reporte que muchos ignoran. FBAR (FinCEN 114) aplica si tienes cuentas bancarias extranjeras con saldo agregado mayor a $10,000 — la propiedad en sí no es cuenta financiera, pero la cuenta donde depositas las rentas sí lo es. Form 8938 (FATCA) aplica a activos financieros extranjeros según ciertos umbrales; el inmueble en sí mismo no es un activo financiero para FATCA, pero las cuentas bancarias mexicanas donde depositas las rentas sí lo son.</p>
+  <p data-lang="en">And here's an important point about the Mexican trust: treatment as a "Foreign Trust" for the IRS depends on the specific structure. Under Revenue Ruling 2013-14, certain trusts where the trustee bank has no powers beyond holding legal title to the property may qualify as agency relationships rather than foreign trusts, in which case Forms 3520 and 3520-A are not required. However, if the trust grants the bank any additional powers, the ruling doesn't apply and the reporting obligation is reactivated. The classification isn't automatic and should be confirmed with a CPA specializing in international structures.</p>
+  <p data-lang="es">Y aquí viene un punto importante sobre el fideicomiso mexicano: el tratamiento como "Foreign Trust" para el IRS depende de la estructura específica. Bajo el Revenue Ruling 2013-14, ciertos fideicomisos donde el banco fiduciario no tiene facultades más allá de mantener el título legal de la propiedad pueden calificar como relaciones de agencia (agency relationships) y no como foreign trusts, en cuyo caso no se requieren los Formularios 3520 y 3520-A. Sin embargo, si el fideicomiso otorga al banco cualquier facultad adicional, el ruling no aplica y la obligación de reportar se reactiva. La clasificación no es automática y debe confirmarse con un CPA especializado en estructuras internacionales.</p>
+  <p data-lang="en">If the trust does qualify as a Foreign Trust, penalties for not filing Form 3520 vary by type of violation: for transfers to the trust or distributions received (IRC §6048(a) and (c)), the penalty is $10,000 or 35% of the gross reportable amount, whichever is greater; for the annual Form 3520-A report (IRC §6048(b)), the penalty is $10,000 or 5% of the gross reportable amount. Note: as of 2025, the IRS announced it will no longer impose automatic penalties for late filing of Form 3520 if a reasonable cause statement is attached, though this doesn't eliminate the risk entirely. The conservative position remains to assume it applies until you confirm otherwise.</p>
+  <p data-lang="es">Si el fideicomiso sí califica como Foreign Trust, las penalidades por no presentar Form 3520 varían según el tipo de incumplimiento: para transferencias al fideicomiso o distribuciones recibidas (IRC §6048(a) y (c)), la penalidad es $10,000 o el 35% del monto bruto reportable, lo que sea mayor; para el reporte anual Form 3520-A (IRC §6048(b)), la penalidad es $10,000 o el 5% del monto bruto reportable. Nota: a partir de 2025, el IRS anunció que ya no impondrá penalidades automáticas por presentación tardía del Form 3520 si se adjunta declaración de causa razonable, aunque esto no elimina el riesgo por completo. La posición conservadora sigue siendo asumir que aplica hasta confirmar lo contrario.</p>
+  <p data-lang="en">I've seen clients who "forget" to mention the Mexican condo to their accountant and then have serious problems with the IRS. Not through intentional evasion—through simple ignorance of reporting rules.</p>
+  <p data-lang="es">Me ha tocado ver clientes que "olvidan" mencionar el departamento en México a su contador y luego tienen problemas serios con el IRS. No por evasión intencional — por simple desconocimiento de las reglas de reporte.</p>
 
   <img src="/blog/images/corporation-vs-individual-fideicomiso-mid.jpg" alt="Rolled corporate org chart with brass seal and keys over a Mexican property certificate" class="mid-img"/>
 
   <!-- SECTION: Mexican trap -->
-  <h2 data-lang-en>The Mexican trap: The subsidiary that saves nothing</h2>
-  <h2 data-lang-es>La trampa mexicana: La subsidiaria que no ahorra nada</h2>
-  <p data-lang-en>This is where many get confused.</p>
-  <p data-lang-es>Aquí es donde muchos se confunden.</p>
-  <p data-lang-en>"If I create a Mexican company, I can own directly without a trust, deduct all expenses, and pay less tax." It sounds logical. And it's partially true.</p>
-  <p data-lang-es>"Si creo una empresa mexicana, puedo ser dueño directo sin fideicomiso, deduzco todos los gastos, y pago menos impuestos." Suena lógico. Y es parcialmente cierto.</p>
-  <p data-lang-en>Let's run the numbers with a condo generating $27,500 in annual rent:</p>
-  <p data-lang-es>Hagamos los números con un departamento que genera $27,500 dólares de renta al año:</p>
-  <div class="calc-box" data-lang-en>
+  <h2 data-lang="en">The Mexican trap: The subsidiary that saves nothing</h2>
+  <h2 data-lang="es">La trampa mexicana: La subsidiaria que no ahorra nada</h2>
+  <p data-lang="en">This is where many get confused.</p>
+  <p data-lang="es">Aquí es donde muchos se confunden.</p>
+  <p data-lang="en">"If I create a Mexican company, I can own directly without a trust, deduct all expenses, and pay less tax." It sounds logical. And it's partially true.</p>
+  <p data-lang="es">"Si creo una empresa mexicana, puedo ser dueño directo sin fideicomiso, deduzco todos los gastos, y pago menos impuestos." Suena lógico. Y es parcialmente cierto.</p>
+  <p data-lang="en">Let's run the numbers with a condo generating $27,500 in annual rent:</p>
+  <p data-lang="es">Hagamos los números con un departamento que genera $27,500 dólares de renta al año:</p>
+  <div class="calc-box" data-lang="en">
     <h4>Option A — Direct trust (non-resident, standard regime)</h4>
     <ul>
       <li>Mexico income tax: 25% on gross income = $6,875 USD (Art. 158 LISR — specific regime for rental income by non-residents; distinct from Art. 160 which applies to sales/dispositions)</li>
       <li>The trustee bank withholds and remits. Simple.</li>
     </ul>
   </div>
-  <div class="calc-box" data-lang-es>
+  <div class="calc-box" data-lang="es">
     <h4>Opción A — Fideicomiso directo (no residente, régimen estándar)</h4>
     <ul>
       <li>ISR México: 25% sobre ingreso bruto = $6,875 USD (Art. 158 LISR — régimen específico para arrendamiento de inmuebles por no residentes; distinto del Art. 160 que aplica a enajenación/venta)</li>
       <li>El banco fiduciario retiene y entera. Simple.</li>
     </ul>
   </div>
-  <div class="calc-box" data-lang-en>
+  <div class="calc-box" data-lang="en">
     <h4>Option B — Mexican subsidiary</h4>
     <ul>
       <li>Estimated deductible expenses: ~$8,000-10,000 USD (property tax, maintenance, HOA, accountant, 5% annual depreciation)</li>
@@ -227,7 +228,7 @@ body.lang-es [data-lang-es]{display:revert}
       <li>Mexico income tax: 30% on taxable result = ~$5,250-5,850 USD (Art. 9 LISR)</li>
     </ul>
   </div>
-  <div class="calc-box" data-lang-es>
+  <div class="calc-box" data-lang="es">
     <h4>Opción B — Subsidiaria mexicana</h4>
     <ul>
       <li>Gastos deducibles estimados: ~$8,000-10,000 USD (predial, mantenimiento, HOA, contador, depreciación al 5% anual)</li>
@@ -235,81 +236,81 @@ body.lang-es [data-lang-es]{display:revert}
       <li>ISR México: 30% sobre resultado fiscal = ~$5,250-5,850 USD (Art. 9 LISR)</li>
     </ul>
   </div>
-  <p data-lang-en>The subsidiary "saves" $1,000-1,500 in Mexican income tax compared to the trust's standard regime. But wait—we're not done.</p>
-  <p data-lang-es>La subsidiaria "ahorra" $1,000-1,500 dólares en ISR mexicano comparado con el régimen estándar del fideicomiso. Pero espera — no hemos terminado.</p>
-  <p data-lang-en><strong>Costs of maintaining the subsidiary:</strong> Formation (~$1,000-1,500 USD), monthly accounting, tax filings, beneficial owner compliance, corporate minutes, possible tax audit if you grow: $3,000-5,000 per year.</p>
-  <p data-lang-es><strong>Costos de mantener la subsidiaria:</strong> Constitución (~$1,000-1,500 USD), contabilidad mensual, declaraciones, cumplimiento de beneficiario controlador, actas, posible dictamen fiscal si creces: $3,000-5,000 dólares al año.</p>
-  <p data-lang-en><strong>The "savings" are already negative.</strong> You pay more for the structure than you save in taxes.</p>
-  <p data-lang-es><strong>El "ahorro" ya es negativo.</strong> Pagas más por la estructura de lo que ahorras en impuestos.</p>
-  <p data-lang-en><strong>And the final blow is still coming:</strong> When you want to extract profits from the Mexican subsidiary to your pocket (or to your foreign company), there's an additional withholding on dividends distributed to foreign residents. The general rate is 10% (articles 140 and 164 of the LISR), but bilateral treaties with the United States and Canada reduce it to 5% if the foreign company owns at least 10% of the subsidiary's capital. If you reinvest and never distribute, you stay at 30% corporate income tax plus the costs of maintaining the structure. But if you want to use that money, the effective tax burden rises to approximately 33-35% applying the treaty, or 37% without it.</p>
-  <p data-lang-es><strong>Y todavía falta el golpe final:</strong> Cuando quieras sacar las utilidades de la subsidiaria mexicana a tu bolsillo (o a tu empresa extranjera), hay una retención adicional sobre dividendos distribuidos a residentes en el extranjero. La tasa general es 10% (artículos 140 y 164 de la LISR), pero los tratados bilaterales con Estados Unidos y Canadá la reducen al 5% si la empresa extranjera posee al menos 10% del capital de la subsidiaria. Si reinviertes y nunca distribuyes, te quedas en el 30% de ISR corporativo más los costos de mantener la estructura. Pero si quieres usar ese dinero, la carga fiscal efectiva sube a aproximadamente 33-35% aplicando el tratado, o 37% sin él.</p>
-  <p data-lang-en>Compare: 25% gross with a direct trust vs. 33-37% effective with a subsidiary when you want to use the money. And with triple the administrative complexity.</p>
-  <p data-lang-es>Compara: 25% bruto en fideicomiso directo vs. 33-37% efectivo con subsidiaria cuando quieres usar el dinero. Y con el triple de complejidad administrativa.</p>
-  <p data-lang-en>If you're Canadian, add FAPI: the subsidiary's income gets taxed in Canada every year even if you don't distribute it. The supposed benefit of "trapped capital" disappears completely.</p>
-  <p data-lang-es>Si eres canadiense, súmale FAPI: el ingreso de la subsidiaria se grava en Canadá cada año aunque no lo distribuyas. El supuesto beneficio de "capital atrapado" desaparece completamente.</p>
-  <div class="note" data-lang-en>Note: This analysis covers income tax. Depending on how you operate the rental (especially if it's Airbnb-style hospitality with services), 16% VAT and state lodging tax (~3% in Jalisco) may apply. That's a topic for another article, but keep it in mind.</div>
-  <div class="note" data-lang-es>Nota: Este análisis cubre ISR. Dependiendo de cómo operes la renta (especialmente si es hospedaje tipo Airbnb con servicios), puede aplicar IVA del 16% y el impuesto estatal de hospedaje (~3% en Jalisco). Eso es tema para otro artículo, pero tenlo en cuenta.</div>
+  <p data-lang="en">The subsidiary "saves" $1,000-1,500 in Mexican income tax compared to the trust's standard regime. But wait—we're not done.</p>
+  <p data-lang="es">La subsidiaria "ahorra" $1,000-1,500 dólares en ISR mexicano comparado con el régimen estándar del fideicomiso. Pero espera — no hemos terminado.</p>
+  <p data-lang="en"><strong>Costs of maintaining the subsidiary:</strong> Formation (~$1,000-1,500 USD), monthly accounting, tax filings, beneficial owner compliance, corporate minutes, possible tax audit if you grow: $3,000-5,000 per year.</p>
+  <p data-lang="es"><strong>Costos de mantener la subsidiaria:</strong> Constitución (~$1,000-1,500 USD), contabilidad mensual, declaraciones, cumplimiento de beneficiario controlador, actas, posible dictamen fiscal si creces: $3,000-5,000 dólares al año.</p>
+  <p data-lang="en"><strong>The "savings" are already negative.</strong> You pay more for the structure than you save in taxes.</p>
+  <p data-lang="es"><strong>El "ahorro" ya es negativo.</strong> Pagas más por la estructura de lo que ahorras en impuestos.</p>
+  <p data-lang="en"><strong>And the final blow is still coming:</strong> When you want to extract profits from the Mexican subsidiary to your pocket (or to your foreign company), there's an additional withholding on dividends distributed to foreign residents. The general rate is 10% (articles 140 and 164 of the LISR), but bilateral treaties with the United States and Canada reduce it to 5% if the foreign company owns at least 10% of the subsidiary's capital. If you reinvest and never distribute, you stay at 30% corporate income tax plus the costs of maintaining the structure. But if you want to use that money, the effective tax burden rises to approximately 33-35% applying the treaty, or 37% without it.</p>
+  <p data-lang="es"><strong>Y todavía falta el golpe final:</strong> Cuando quieras sacar las utilidades de la subsidiaria mexicana a tu bolsillo (o a tu empresa extranjera), hay una retención adicional sobre dividendos distribuidos a residentes en el extranjero. La tasa general es 10% (artículos 140 y 164 de la LISR), pero los tratados bilaterales con Estados Unidos y Canadá la reducen al 5% si la empresa extranjera posee al menos 10% del capital de la subsidiaria. Si reinviertes y nunca distribuyes, te quedas en el 30% de ISR corporativo más los costos de mantener la estructura. Pero si quieres usar ese dinero, la carga fiscal efectiva sube a aproximadamente 33-35% aplicando el tratado, o 37% sin él.</p>
+  <p data-lang="en">Compare: 25% gross with a direct trust vs. 33-37% effective with a subsidiary when you want to use the money. And with triple the administrative complexity.</p>
+  <p data-lang="es">Compara: 25% bruto en fideicomiso directo vs. 33-37% efectivo con subsidiaria cuando quieres usar el dinero. Y con el triple de complejidad administrativa.</p>
+  <p data-lang="en">If you're Canadian, add FAPI: the subsidiary's income gets taxed in Canada every year even if you don't distribute it. The supposed benefit of "trapped capital" disappears completely.</p>
+  <p data-lang="es">Si eres canadiense, súmale FAPI: el ingreso de la subsidiaria se grava en Canadá cada año aunque no lo distribuyas. El supuesto beneficio de "capital atrapado" desaparece completamente.</p>
+  <div class="note" data-lang="en">Note: This analysis covers income tax. Depending on how you operate the rental (especially if it's Airbnb-style hospitality with services), 16% VAT and state lodging tax (~3% in Jalisco) may apply. That's a topic for another article, but keep it in mind.</div>
+  <div class="note" data-lang="es">Nota: Este análisis cubre ISR. Dependiendo de cómo operes la renta (especialmente si es hospedaje tipo Airbnb con servicios), puede aplicar IVA del 16% y el impuesto estatal de hospedaje (~3% en Jalisco). Eso es tema para otro artículo, pero tenlo en cuenta.</div>
 
   <!-- SECTION: treaties -->
-  <h2 data-lang-en>Treaties help, but they're not magic</h2>
-  <h2 data-lang-es>Los tratados ayudan, pero no son magia</h2>
-  <p data-lang-en>Mexico has tax treaties with the United States and Canada. They work. They allow you to credit taxes paid in Mexico in your home country, avoiding paying twice on the same income. They also reduce certain withholdings, like dividends from 10% to 5% under specific conditions.</p>
-  <p data-lang-es>México tiene tratados para evitar la doble tributación con Estados Unidos y Canadá. Funcionan. Permiten acreditar en tu país de origen los impuestos que pagaste en México, evitando que pagues dos veces sobre el mismo ingreso. También reducen ciertas retenciones, como la de dividendos del 10% al 5% bajo condiciones específicas.</p>
-  <p data-lang-en>But they don't completely eliminate friction. The problem is the difference in tax base: Mexico charges you 25% on gross income (under the standard non-resident regime); your country calculates the foreign tax credit on its own base (typically net income). The math doesn't always align perfectly. You may end up with residual tax at home even though you paid in Mexico.</p>
-  <p data-lang-es>Pero no eliminan completamente la fricción. El problema es la diferencia de base: México te cobra 25% sobre ingreso bruto (en el régimen estándar para no residentes); tu país calcula el crédito fiscal sobre su propia base (típicamente ingreso neto). Las matemáticas no siempre empatan perfectamente. Puedes terminar con impuesto residual en casa aunque hayas pagado en México.</p>
-  <p data-lang-en>Treaties are a tool, not a magic solution. And they require the structure to be well-planned from the beginning to take advantage of them properly.</p>
-  <p data-lang-es>Los tratados son herramienta, no solución mágica. Y requieren que la estructura esté bien pensada desde el principio para aprovecharlos correctamente.</p>
+  <h2 data-lang="en">Treaties help, but they're not magic</h2>
+  <h2 data-lang="es">Los tratados ayudan, pero no son magia</h2>
+  <p data-lang="en">Mexico has tax treaties with the United States and Canada. They work. They allow you to credit taxes paid in Mexico in your home country, avoiding paying twice on the same income. They also reduce certain withholdings, like dividends from 10% to 5% under specific conditions.</p>
+  <p data-lang="es">México tiene tratados para evitar la doble tributación con Estados Unidos y Canadá. Funcionan. Permiten acreditar en tu país de origen los impuestos que pagaste en México, evitando que pagues dos veces sobre el mismo ingreso. También reducen ciertas retenciones, como la de dividendos del 10% al 5% bajo condiciones específicas.</p>
+  <p data-lang="en">But they don't completely eliminate friction. The problem is the difference in tax base: Mexico charges you 25% on gross income (under the standard non-resident regime); your country calculates the foreign tax credit on its own base (typically net income). The math doesn't always align perfectly. You may end up with residual tax at home even though you paid in Mexico.</p>
+  <p data-lang="es">Pero no eliminan completamente la fricción. El problema es la diferencia de base: México te cobra 25% sobre ingreso bruto (en el régimen estándar para no residentes); tu país calcula el crédito fiscal sobre su propia base (típicamente ingreso neto). Las matemáticas no siempre empatan perfectamente. Puedes terminar con impuesto residual en casa aunque hayas pagado en México.</p>
+  <p data-lang="en">Treaties are a tool, not a magic solution. And they require the structure to be well-planned from the beginning to take advantage of them properly.</p>
+  <p data-lang="es">Los tratados son herramienta, no solución mágica. Y requieren que la estructura esté bien pensada desde el principio para aprovecharlos correctamente.</p>
 
   <!-- SECTION: when does it make sense -->
-  <h2 data-lang-en>So when DOES it make sense to buy through an entity?</h2>
-  <h2 data-lang-es>Entonces, ¿cuándo SÍ tiene sentido comprar con una entidad?</h2>
-  <p data-lang-en>There are legitimate scenarios:</p>
-  <p data-lang-es>Hay escenarios legítimos:</p>
-  <p data-lang-en><strong>1. Trapped capital with no alternative.</strong> If the money is inside your corporation and extracting it costs you 35-40% in distribution taxes, using the corporation to buy directly via trust may make sense, even if you pay more in compliance. It's a financial calculation, not a universal truth. But remember: if you're Canadian, this doesn't eliminate the shareholder benefit analysis, the tax burden on passive income for CCPCs, the possible FAPI impact if you use a subsidiary, or the risk under Section 94 for foreign trusts.</p>
-  <p data-lang-es><strong>1. Capital atrapado sin alternativa.</strong> Si el dinero está dentro de tu corporación y sacarlo te cuesta 35-40% en impuestos de distribución, usar la corporación para comprar directamente vía fideicomiso puede tener sentido, aunque pagues más en compliance. Es un cálculo financiero, no una verdad universal. Pero recuerda: si eres canadiense, esto no elimina el análisis de shareholder benefit, la carga fiscal sobre ingreso pasivo de CCPCs, el posible impacto de FAPI si usas subsidiaria, ni el riesgo bajo Section 94 para fideicomisos extranjeros.</p>
-  <p data-lang-en><strong>2. Multiple properties.</strong> If you plan to buy three, five, ten properties in Mexico and operate them as a real rental business, a corporate structure starts to justify its fixed costs. For a single property, almost never.</p>
-  <p data-lang-es><strong>2. Portafolio múltiple.</strong> Si planeas comprar tres, cinco, diez propiedades en México y operarlas como negocio real de renta, una estructura corporativa empieza a justificar sus costos fijos. Para una sola propiedad, casi nunca.</p>
-  <p data-lang-en><strong>3. Real asset protection.</strong> If you have potential creditors, pending lawsuits, or a high-risk profile, separating the asset from your personal wealth may be worth the cost. But be careful: the Mexican trust alone doesn't protect against the beneficiary's creditors—trust rights are attachable. For real protection you need a well-designed corporate structure, and that requires specific legal analysis on both sides of the border, not a generic recommendation.</p>
-  <p data-lang-es><strong>3. Protección patrimonial real.</strong> Si tienes acreedores potenciales, juicios pendientes, o un perfil de riesgo alto, separar el activo de tu patrimonio personal puede valer el costo. Pero cuidado: el fideicomiso mexicano por sí solo no protege contra acreedores del beneficiario — los derechos fideicomisarios son embargables. Para protección real necesitas estructura corporativa bien diseñada, y eso requiere análisis legal específico de ambos lados de la frontera, no una recomendación genérica.</p>
-  <p data-lang-en><strong>4. Partner or co-investor.</strong> If you're buying with a partner who isn't your spouse, an entity can simplify governance, decision-making, and eventual exit. The alternative is a complex co-ownership agreement within the trust.</p>
-  <p data-lang-es><strong>4. Socio o coinversionista.</strong> Si compras con un socio que no es tu cónyuge, una entidad puede simplificar la gobernanza, la toma de decisiones, y la salida eventual. La alternativa es un acuerdo de copropiedad complejo dentro del fideicomiso.</p>
-  <p data-lang-en><strong>5. Long-term sale with high appreciation.</strong> If you're buying property you expect to appreciate significantly and plan to sell in 10 years, the sale tax calculation deserves analysis. Both the foreigner (under Article 160 of the LISR, which allows opting for 35% on net gain with a legal representative) and the Mexican company can deduct inflation-adjusted acquisition cost. The difference is in the rates—35% for non-residents vs. 30% for the company—and in withholding mechanics. For properties with high appreciation, the corporate structure may offer marginal advantages, but this requires specific projections, it's not automatic.</p>
-  <p data-lang-es><strong>5. Horizonte de venta con alta plusvalía.</strong> Si compras una propiedad que esperas revalorice significativamente y planeas venderla en 10 años, el cálculo de impuesto a la venta merece análisis. Tanto el extranjero (bajo el artículo 160 de la LISR, que permite optar por el 35% sobre ganancia neta con representante legal) como la empresa mexicana pueden deducir el costo actualizado por inflación. La diferencia está en las tasas — 35% para no residentes vs. 30% para la empresa — y en la mecánica de retención. Para propiedades con alta plusvalía, la estructura corporativa puede ofrecer ventajas marginales, pero esto requiere proyecciones específicas, no es automático.</p>
-  <p data-lang-en>If none of these scenarios apply—if you're a foreigner who wants to buy a condo to use a few weeks a year and rent the rest—a personal trust is almost always the best option. Simpler, cheaper, less risk of cross-border tax mistakes. And with designated substitute beneficiaries, succession is clean without needing probate in your country or succession proceedings in Mexico for the property.</p>
-  <p data-lang-es>Si ninguno de estos escenarios aplica —si eres un extranjero que quiere comprar un departamento para usarlo unas semanas al año y rentarlo el resto— el fideicomiso a nombre personal es casi siempre la mejor opción. Más simple, más barato, menos riesgo de errores fiscales transfronterizos. Y con beneficiarios sustitutos designados, la sucesión es limpia sin necesidad de probate en tu país ni juicio sucesorio en México por el inmueble.</p>
+  <h2 data-lang="en">So when DOES it make sense to buy through an entity?</h2>
+  <h2 data-lang="es">Entonces, ¿cuándo SÍ tiene sentido comprar con una entidad?</h2>
+  <p data-lang="en">There are legitimate scenarios:</p>
+  <p data-lang="es">Hay escenarios legítimos:</p>
+  <p data-lang="en"><strong>1. Trapped capital with no alternative.</strong> If the money is inside your corporation and extracting it costs you 35-40% in distribution taxes, using the corporation to buy directly via trust may make sense, even if you pay more in compliance. It's a financial calculation, not a universal truth. But remember: if you're Canadian, this doesn't eliminate the shareholder benefit analysis, the tax burden on passive income for CCPCs, the possible FAPI impact if you use a subsidiary, or the risk under Section 94 for foreign trusts.</p>
+  <p data-lang="es"><strong>1. Capital atrapado sin alternativa.</strong> Si el dinero está dentro de tu corporación y sacarlo te cuesta 35-40% en impuestos de distribución, usar la corporación para comprar directamente vía fideicomiso puede tener sentido, aunque pagues más en compliance. Es un cálculo financiero, no una verdad universal. Pero recuerda: si eres canadiense, esto no elimina el análisis de shareholder benefit, la carga fiscal sobre ingreso pasivo de CCPCs, el posible impacto de FAPI si usas subsidiaria, ni el riesgo bajo Section 94 para fideicomisos extranjeros.</p>
+  <p data-lang="en"><strong>2. Multiple properties.</strong> If you plan to buy three, five, ten properties in Mexico and operate them as a real rental business, a corporate structure starts to justify its fixed costs. For a single property, almost never.</p>
+  <p data-lang="es"><strong>2. Portafolio múltiple.</strong> Si planeas comprar tres, cinco, diez propiedades en México y operarlas como negocio real de renta, una estructura corporativa empieza a justificar sus costos fijos. Para una sola propiedad, casi nunca.</p>
+  <p data-lang="en"><strong>3. Real asset protection.</strong> If you have potential creditors, pending lawsuits, or a high-risk profile, separating the asset from your personal wealth may be worth the cost. But be careful: the Mexican trust alone doesn't protect against the beneficiary's creditors—trust rights are attachable. For real protection you need a well-designed corporate structure, and that requires specific legal analysis on both sides of the border, not a generic recommendation.</p>
+  <p data-lang="es"><strong>3. Protección patrimonial real.</strong> Si tienes acreedores potenciales, juicios pendientes, o un perfil de riesgo alto, separar el activo de tu patrimonio personal puede valer el costo. Pero cuidado: el fideicomiso mexicano por sí solo no protege contra acreedores del beneficiario — los derechos fideicomisarios son embargables. Para protección real necesitas estructura corporativa bien diseñada, y eso requiere análisis legal específico de ambos lados de la frontera, no una recomendación genérica.</p>
+  <p data-lang="en"><strong>4. Partner or co-investor.</strong> If you're buying with a partner who isn't your spouse, an entity can simplify governance, decision-making, and eventual exit. The alternative is a complex co-ownership agreement within the trust.</p>
+  <p data-lang="es"><strong>4. Socio o coinversionista.</strong> Si compras con un socio que no es tu cónyuge, una entidad puede simplificar la gobernanza, la toma de decisiones, y la salida eventual. La alternativa es un acuerdo de copropiedad complejo dentro del fideicomiso.</p>
+  <p data-lang="en"><strong>5. Long-term sale with high appreciation.</strong> If you're buying property you expect to appreciate significantly and plan to sell in 10 years, the sale tax calculation deserves analysis. Both the foreigner (under Article 160 of the LISR, which allows opting for 35% on net gain with a legal representative) and the Mexican company can deduct inflation-adjusted acquisition cost. The difference is in the rates—35% for non-residents vs. 30% for the company—and in withholding mechanics. For properties with high appreciation, the corporate structure may offer marginal advantages, but this requires specific projections, it's not automatic.</p>
+  <p data-lang="es"><strong>5. Horizonte de venta con alta plusvalía.</strong> Si compras una propiedad que esperas revalorice significativamente y planeas venderla en 10 años, el cálculo de impuesto a la venta merece análisis. Tanto el extranjero (bajo el artículo 160 de la LISR, que permite optar por el 35% sobre ganancia neta con representante legal) como la empresa mexicana pueden deducir el costo actualizado por inflación. La diferencia está en las tasas — 35% para no residentes vs. 30% para la empresa — y en la mecánica de retención. Para propiedades con alta plusvalía, la estructura corporativa puede ofrecer ventajas marginales, pero esto requiere proyecciones específicas, no es automático.</p>
+  <p data-lang="en">If none of these scenarios apply—if you're a foreigner who wants to buy a condo to use a few weeks a year and rent the rest—a personal trust is almost always the best option. Simpler, cheaper, less risk of cross-border tax mistakes. And with designated substitute beneficiaries, succession is clean without needing probate in your country or succession proceedings in Mexico for the property.</p>
+  <p data-lang="es">Si ninguno de estos escenarios aplica —si eres un extranjero que quiere comprar un departamento para usarlo unas semanas al año y rentarlo el resto— el fideicomiso a nombre personal es casi siempre la mejor opción. Más simple, más barato, menos riesgo de errores fiscales transfronterizos. Y con beneficiarios sustitutos designados, la sucesión es limpia sin necesidad de probate en tu país ni juicio sucesorio en México por el inmueble.</p>
 
   <!-- SECTION: most expensive mistake -->
-  <h2 data-lang-en>The most expensive mistake: Believing tax structure can be improvised</h2>
-  <h2 data-lang-es>El error más caro: Creer que la estructura fiscal se puede improvisar</h2>
-  <p data-lang-en>The difference between paying what's fair and overpaying isn't in finding the "hack" your accountant doesn't know. It's in understanding how Mexico's rules interact with your country's—and planning the structure before signing, not after.</p>
-  <p data-lang-es>La diferencia entre pagar lo justo y pagar de más no está en encontrar el "hack" que tu contador no conoce. Está en entender cómo interactúan las reglas de México con las de tu país — y planear la estructura antes de firmar, no después.</p>
-  <p data-lang-en>I've seen buyers who formed a Mexican subsidiary because someone told them "that's how you deduct everything," and now they're trapped: they pay a Mexican accountant, they pay corporate taxes, and when they want to extract money they pay dividend withholding. They would have paid less with a simple personal trust.</p>
-  <p data-lang-es>He visto compradores que constituyeron subsidiaria mexicana porque alguien les dijo que "así se deduce todo", y ahora están atrapados: pagan contador mexicano, pagan impuestos corporativos, y cuando quieren sacar el dinero pagan retención de dividendos. Hubieran pagado menos con un simple fideicomiso personal.</p>
-  <p data-lang-en>I've seen Canadians who bought through their Inc. without consulting anyone who understood FAPI or the tax burden on passive income for CCPCs, and now they pay high taxes in Canada on rental income they never touched.</p>
-  <p data-lang-es>He visto canadienses que compraron vía su Inc. sin consultar a nadie que entendiera FAPI o la carga fiscal sobre ingreso pasivo de CCPCs, y ahora pagan impuestos altos en Canadá sobre renta que nunca tocaron.</p>
-  <p data-lang-en>I've seen Americans who didn't confirm their trust's treatment under Revenue Ruling 2013-14 and received IRS letters questioning why they didn't file Form 3520.</p>
-  <p data-lang-es>He visto americanos que no confirmaron el tratamiento de su fideicomiso bajo Revenue Ruling 2013-14 y recibieron cartas del IRS cuestionando por qué no presentaron Form 3520.</p>
-  <p data-lang-en>All these mistakes have something in common: the advice came from someone who knew the rules of one country, not both.</p>
-  <p data-lang-es>Todos estos errores tienen algo en común: el consejo vino de alguien que conocía las reglas de un solo país, no de ambos.</p>
+  <h2 data-lang="en">The most expensive mistake: Believing tax structure can be improvised</h2>
+  <h2 data-lang="es">El error más caro: Creer que la estructura fiscal se puede improvisar</h2>
+  <p data-lang="en">The difference between paying what's fair and overpaying isn't in finding the "hack" your accountant doesn't know. It's in understanding how Mexico's rules interact with your country's—and planning the structure before signing, not after.</p>
+  <p data-lang="es">La diferencia entre pagar lo justo y pagar de más no está en encontrar el "hack" que tu contador no conoce. Está en entender cómo interactúan las reglas de México con las de tu país — y planear la estructura antes de firmar, no después.</p>
+  <p data-lang="en">I've seen buyers who formed a Mexican subsidiary because someone told them "that's how you deduct everything," and now they're trapped: they pay a Mexican accountant, they pay corporate taxes, and when they want to extract money they pay dividend withholding. They would have paid less with a simple personal trust.</p>
+  <p data-lang="es">He visto compradores que constituyeron subsidiaria mexicana porque alguien les dijo que "así se deduce todo", y ahora están atrapados: pagan contador mexicano, pagan impuestos corporativos, y cuando quieren sacar el dinero pagan retención de dividendos. Hubieran pagado menos con un simple fideicomiso personal.</p>
+  <p data-lang="en">I've seen Canadians who bought through their Inc. without consulting anyone who understood FAPI or the tax burden on passive income for CCPCs, and now they pay high taxes in Canada on rental income they never touched.</p>
+  <p data-lang="es">He visto canadienses que compraron vía su Inc. sin consultar a nadie que entendiera FAPI o la carga fiscal sobre ingreso pasivo de CCPCs, y ahora pagan impuestos altos en Canadá sobre renta que nunca tocaron.</p>
+  <p data-lang="en">I've seen Americans who didn't confirm their trust's treatment under Revenue Ruling 2013-14 and received IRS letters questioning why they didn't file Form 3520.</p>
+  <p data-lang="es">He visto americanos que no confirmaron el tratamiento de su fideicomiso bajo Revenue Ruling 2013-14 y recibieron cartas del IRS cuestionando por qué no presentaron Form 3520.</p>
+  <p data-lang="en">All these mistakes have something in common: the advice came from someone who knew the rules of one country, not both.</p>
+  <p data-lang="es">Todos estos errores tienen algo en común: el consejo vino de alguien que conocía las reglas de un solo país, no de ambos.</p>
 
   <!-- SECTION: honest conclusion -->
-  <h2 data-lang-en>The honest conclusion</h2>
-  <h2 data-lang-es>La conclusión honesta</h2>
-  <p data-lang-en>Buying in Mexico through a foreign entity can be smart or it can be a costly mistake. The difference isn't in the nationality of your company or the name of the structure. It's in whether someone sat down to analyze your specific case: where the capital comes from, how you plan to use the property, what your exit horizon is, and how the tax rules on each side of the border interact.</p>
-  <p data-lang-es>Comprar en México a través de una entidad extranjera puede ser inteligente o puede ser un error costoso. La diferencia no está en la nacionalidad de tu empresa ni en el nombre de la estructura. Está en si alguien se sentó a analizar tu caso específico: de dónde viene el capital, cómo planeas usar la propiedad, cuál es tu horizonte de salida, y cómo interactúan las reglas fiscales de cada lado de la frontera.</p>
-  <p data-lang-en>If your accountant says "buy with your LLC" and has never closed a transaction in Mexico, get a second opinion from someone who has. And if your Mexican lawyer says "I can set up a subsidiary for you" without asking what implications that has in your home country, get a second opinion too.</p>
-  <p data-lang-es>Si tu contador te dice "compra con tu LLC" y nunca ha cerrado una operación en México, busca una segunda opinión de alguien que sí lo haya hecho. Y si tu abogado mexicano te dice "puedo constituirte una subsidiaria" sin preguntarte qué implicaciones tiene eso en tu país de origen, busca una segunda opinión también.</p>
-  <p data-lang-en>The cost of that second opinion is a fraction of what you can lose by structuring wrong.</p>
-  <p data-lang-es>El costo de esa segunda opinión es una fracción de lo que puedes perder por estructurar mal.</p>
+  <h2 data-lang="en">The honest conclusion</h2>
+  <h2 data-lang="es">La conclusión honesta</h2>
+  <p data-lang="en">Buying in Mexico through a foreign entity can be smart or it can be a costly mistake. The difference isn't in the nationality of your company or the name of the structure. It's in whether someone sat down to analyze your specific case: where the capital comes from, how you plan to use the property, what your exit horizon is, and how the tax rules on each side of the border interact.</p>
+  <p data-lang="es">Comprar en México a través de una entidad extranjera puede ser inteligente o puede ser un error costoso. La diferencia no está en la nacionalidad de tu empresa ni en el nombre de la estructura. Está en si alguien se sentó a analizar tu caso específico: de dónde viene el capital, cómo planeas usar la propiedad, cuál es tu horizonte de salida, y cómo interactúan las reglas fiscales de cada lado de la frontera.</p>
+  <p data-lang="en">If your accountant says "buy with your LLC" and has never closed a transaction in Mexico, get a second opinion from someone who has. And if your Mexican lawyer says "I can set up a subsidiary for you" without asking what implications that has in your home country, get a second opinion too.</p>
+  <p data-lang="es">Si tu contador te dice "compra con tu LLC" y nunca ha cerrado una operación en México, busca una segunda opinión de alguien que sí lo haya hecho. Y si tu abogado mexicano te dice "puedo constituirte una subsidiaria" sin preguntarte qué implicaciones tiene eso en tu país de origen, busca una segunda opinión también.</p>
+  <p data-lang="en">The cost of that second opinion is a fraction of what you can lose by structuring wrong.</p>
+  <p data-lang="es">El costo de esa segunda opinión es una fracción de lo que puedes perder por estructurar mal.</p>
 
   <!-- CTA -->
   <div class="cta-box">
-    <h3 data-lang-en>Buying in Mexico through your company?</h3>
-    <h3 data-lang-es>¿Vas a comprar en México a través de tu empresa?</h3>
-    <p data-lang-en>Before you sign, it's worth having someone analyze your specific case on both sides of the border. I offer a structure review — trust, LLC, Inc., or subsidiary — so you know which one fits before you commit, not after.</p>
-    <p data-lang-es>Antes de firmar, vale la pena que alguien analice tu caso específico de los dos lados de la frontera. Ofrezco una revisión de estructura — fideicomiso, LLC, Inc. o subsidiaria — para que sepas cuál te conviene antes de comprometerte, no después.</p>
-    <a href="/#contact" class="btn-cta" data-lang-en>Schedule a consultation →</a>
-    <a href="/#contact" class="btn-cta" data-lang-es>Agenda una consulta →</a>
+    <h3 data-lang="en">Buying in Mexico through your company?</h3>
+    <h3 data-lang="es">¿Vas a comprar en México a través de tu empresa?</h3>
+    <p data-lang="en">Before you sign, it's worth having someone analyze your specific case on both sides of the border. I offer a structure review — trust, LLC, Inc., or subsidiary — so you know which one fits before you commit, not after.</p>
+    <p data-lang="es">Antes de firmar, vale la pena que alguien analice tu caso específico de los dos lados de la frontera. Ofrezco una revisión de estructura — fideicomiso, LLC, Inc. o subsidiaria — para que sepas cuál te conviene antes de comprometerte, no después.</p>
+    <a href="/#contact" class="btn-cta" data-lang="en">Schedule a consultation →</a>
+    <a href="/#contact" class="btn-cta" data-lang="es">Agenda una consulta →</a>
   </div>
 
   <!-- AUTHOR -->
@@ -317,8 +318,8 @@ body.lang-es [data-lang-es]{display:revert}
     <div class="author-initials">RR</div>
     <div class="author-info">
       <strong>Lic. Rolando Romero García</strong>
-      <p data-lang-en>Professional License No. 5255863 — Over 20 years advising English-speaking clients on real estate transactions, trusts, and immigration in Puerto Vallarta and Riviera Nayarit.</p>
-      <p data-lang-es>Cédula Profesional No. 5255863 — Más de 20 años asesorando a clientes angloparlantes en transacciones inmobiliarias, fideicomiso e inmigración en Puerto Vallarta y Riviera Nayarit.</p>
+      <p data-lang="en">Professional License No. 5255863 — Over 20 years advising English-speaking clients on real estate transactions, trusts, and immigration in Puerto Vallarta and Riviera Nayarit.</p>
+      <p data-lang="es">Cédula Profesional No. 5255863 — Más de 20 años asesorando a clientes angloparlantes en transacciones inmobiliarias, fideicomiso e inmigración en Puerto Vallarta y Riviera Nayarit.</p>
     </div>
   </div>
 </div>
@@ -327,13 +328,11 @@ body.lang-es [data-lang-es]{display:revert}
 
 <script>
 function setLang(lang) {
-  if (lang === 'es') {
-    document.body.classList.add('lang-es');
-  } else {
-    document.body.classList.remove('lang-es');
-  }
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+  document.body.setAttribute('data-active-lang', lang);
+  ['en','es','fr'].forEach(function(l){
+    var btn = document.getElementById('btn-' + l);
+    if (btn) btn.classList.toggle('active', l === lang);
+  });
   localStorage.setItem('expatadvisor-lang', lang);
 }
 const saved = localStorage.getItem('expatadvisor-lang');
