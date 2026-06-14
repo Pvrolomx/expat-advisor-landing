@@ -67,6 +67,17 @@ footer{text-align:center;padding:2rem;color:rgba(240,237,230,0.35);font-size:0.8
 <div class="container">
 
   <div class="post-card">
+    <img src="/blog/images/fideicomiso-fallecimiento-hero.jpg" alt="Pacific coast beach at sunset with a leaning palm tree, no people"/>
+    <div class="post-card-body">
+      <span class="post-tag" id="tag4">Real Estate</span>
+      <div class="post-meta" id="meta4">June 2026 &nbsp;&middot;&nbsp; Rolando Romero García</div>
+      <h2 id="h2-4">Your Dad or Mom Passed Away and Owned Property on the Coast of Mexico: The First Thing You Need to Know</h2>
+      <p id="p4">When the holder of a coastal trust property passes away, the family usually feels they have to act now. They don't. This guide explains what to do, in what order, and why most procedures are resolved at a distance, without traveling to Mexico.</p>
+      <a href="/blog/fallecio-titular-fideicomiso-costa-mexico/" class="btn-read" id="btn4">Read article &rarr;</a>
+    </div>
+  </div>
+
+  <div class="post-card">
     <img src="/blog/images/corporation-vs-individual-fideicomiso-hero.jpg" alt="Two formal legal folders with corporate seals beside a personal property document on a lawyer's desk"/>
     <div class="post-card-body">
       <span class="post-tag" id="tag3">Real Estate</span>
@@ -109,7 +120,10 @@ var T = {
     services: 'Services', contact: 'Contact',
     hero: 'Legal <span style="color:#c9a84c">Insights</span> for Expats',
     heroSub: 'Practical guidance on real estate, fideicomiso, immigration and more — from 20+ years of experience in Puerto Vallarta and Riviera Nayarit.',
-    tag: 'Real Estate', meta: 'April 2026 · Rolando Romero García', meta3: 'May 26, 2026 · Rolando Romero García',
+    tag: 'Real Estate', meta: 'April 2026 · Rolando Romero García', meta3: 'May 26, 2026 · Rolando Romero García', meta4: 'June 2026 · Rolando Romero García',
+    h4: 'Your Dad or Mom Passed Away and Owned Property on the Coast of Mexico: The First Thing You Need to Know',
+    p4: 'When the holder of a coastal trust property passes away, the family usually feels they have to act now. They don’t. This guide explains what to do, in what order, and why most procedures are resolved at a distance, without traveling to Mexico.',
+    btn4: 'Read article →',
     h1: 'Buying Pre-Construction in Vallarta: What the Contract Won’t Protect (And What Actually Will)',
     p1: 'The pre-construction contract is non-negotiable, the developer won’t change a comma, and NOM-247 protects you only on paper. Here’s where the real protection actually lives — and the six things worth verifying before you sign.',
     btn1: 'Read article →',
@@ -124,7 +138,10 @@ var T = {
     services: 'Servicios', contact: 'Contacto',
     hero: 'Perspectivas <span style="color:#c9a84c">Legales</span> para Expats',
     heroSub: 'Orientación práctica sobre bienes raíces, fideicomiso, inmigración y más — desde 20+ años de experiencia en Puerto Vallarta y Riviera Nayarit.',
-    tag: 'Bienes Raíces', meta: 'Abril 2026 · Rolando Romero García', meta3: '26 de mayo de 2026 · Rolando Romero García',
+    tag: 'Bienes Raíces', meta: 'Abril 2026 · Rolando Romero García', meta3: '26 de mayo de 2026 · Rolando Romero García', meta4: 'Junio 2026 · Rolando Romero García',
+    h4: 'Falleció tu papá o tu mamá y tenía propiedad en la costa de México: lo primero que debes saber',
+    p4: 'Cuando fallece el titular de una propiedad costera en fideicomiso, la familia suele sentir que tiene que actuar ya. No es así. Esta guía explica qué hacer, en qué orden, y por qué la mayoría de los trámites se resuelven a distancia, sin viajar a México.',
+    btn4: 'Leer artículo →',
     h1: 'Comprar en pre-construcción en Vallarta: lo que el contrato no te va a proteger (y lo que sí)',
     p1: 'El contrato de pre-construcción no se negocia, el desarrollador no va a cambiar una coma, y la NOM-247 solo te protege en el papel. Aquí explicamos dónde está realmente la protección — y las seis cosas que vale la pena verificar antes de firmar.',
     btn1: 'Leer artículo →',
@@ -141,7 +158,11 @@ var T = {
     services: 'Services', contact: 'Contact',
     hero: 'Legal <span style="color:#c9a84c">Insights</span> for Expats',
     heroSub: 'Practical guidance on real estate, fideicomiso, immigration and more — from 20+ years of experience in Puerto Vallarta and Riviera Nayarit.',
-    tag: 'Real Estate', meta: 'April 2026 · Rolando Romero García', meta3: 'May 26, 2026 · Rolando Romero García',
+    tag: 'Real Estate', meta: 'April 2026 · Rolando Romero García', meta3: 'May 26, 2026 · Rolando Romero García', meta4: 'June 2026 · Rolando Romero García',
+    // Fase 1 — FR placeholder; rellena en Fase 3 junto con resto del index
+    h4: 'Your Dad or Mom Passed Away and Owned Property on the Coast of Mexico: The First Thing You Need to Know',
+    p4: 'When the holder of a coastal trust property passes away, the family usually feels they have to act now. They don’t. This guide explains what to do, in what order, and why most procedures are resolved at a distance, without traveling to Mexico.',
+    btn4: 'Read article →',
     h1: 'Buying Pre-Construction in Vallarta: What the Contract Won’t Protect (And What Actually Will)',
     p1: 'The pre-construction contract is non-negotiable, the developer won’t change a comma, and NOM-247 protects you only on paper. Here’s where the real protection actually lives — and the six things worth verifying before you sign.',
     btn1: 'Read article →',
@@ -174,6 +195,11 @@ function setLang(lang) {
   document.getElementById('h2-3').textContent = t.h3;
   document.getElementById('p3').textContent = t.p3;
   document.getElementById('btn3').textContent = t.btn3;
+  document.getElementById('tag4').textContent = t.tag;
+  document.getElementById('meta4').textContent = t.meta4;
+  document.getElementById('h2-4').textContent = t.h4;
+  document.getElementById('p4').textContent = t.p4;
+  document.getElementById('btn4').textContent = t.btn4;
   ['en','es','fr'].forEach(function(l){
     var btn = document.getElementById('btn-' + l);
     if (btn) btn.classList.toggle('active', l === lang);
