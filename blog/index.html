@@ -54,7 +54,7 @@ footer{text-align:center;padding:2rem;color:rgba(240,237,230,0.35);font-size:0.8
     <div class="lang-toggle">
       <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
       <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
-      <button class="lang-btn" id="btn-fr" onclick="setLang('fr')" style="display:none">FR</button>
+      <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
     </div>
   </nav>
 </header>
@@ -169,30 +169,28 @@ var T = {
     p3: 'Tu contador te dijo que compraras con tu LLC o corporación. Suena lógico — deduces viajes, deprecias el inmueble, el dinero trabaja sin salir de la empresa. Pero las reglas de FAPI en Canadá, el Revenue Ruling 2013-14 en Estados Unidos, y la retención sobre dividendos en México pueden convertir esa "estrategia fiscal" en un error de miles de dólares. Aquí te explico cuándo sí tiene sentido y cuándo no.',
     btn3: 'Leer artículo →'
   },
-  // FR placeholder — Fase 1: copia de EN como fallback (degradación elegante).
-  // El contenido FR real se rellena en Fase 3. Botón FR oculto hasta entonces.
+  // FR real — Fase 3: traducción auditada (consolidación + tercero ciego sobre claves de portada y p1-p5).
+  // h1-h5 = copia directa del FR canónico de los artículos (ya auditados en producción).
   fr: {
     services: 'Services', contact: 'Contact',
-    hero: 'Legal <span style="color:#c9a84c">Insights</span> for Expats',
-    heroSub: 'Practical guidance on real estate, fideicomiso, immigration and more — from 20+ years of experience in Puerto Vallarta and Riviera Nayarit.',
-    tag: 'Real Estate', tag5: 'Estate Planning', meta: 'April 2026 · Rolando Romero García', meta3: 'May 26, 2026 · Rolando Romero García', meta4: 'June 2026 · Rolando Romero García', meta5: 'June 2026 · Rolando Romero García',
-    // Fase 1 — FR placeholder; rellena en Fase 3 junto con resto del index
-    h5: 'Substitute trust beneficiary: why it matters more than it seems',
-    p5: 'You made your will thinking it covered your whole estate, including the coastal home. It doesn’t: that property is governed by your trust, not your will, through a figure almost no one reviews — the substitute trust beneficiary. This guide explains why it matters more than it seems.',
-    btn5: 'Read article →',
-    // Fase 1 — FR placeholder; rellena en Fase 3 junto con resto del index
-    h4: 'Your Dad or Mom Passed Away and Owned Property on the Coast of Mexico: The First Thing You Need to Know',
-    p4: 'When the holder of a coastal trust property passes away, the family usually feels they have to act now. They don’t. This guide explains what to do, in what order, and why most procedures are resolved at a distance, without traveling to Mexico.',
-    btn4: 'Read article →',
-    h1: 'Buying Pre-Construction in Vallarta: What the Contract Won’t Protect (And What Actually Will)',
-    p1: 'The pre-construction contract is non-negotiable, the developer won’t change a comma, and NOM-247 protects you only on paper. Here’s where the real protection actually lives — and the six things worth verifying before you sign.',
-    btn1: 'Read article →',
-    h2: 'The Deed Reading at Closing in Mexico: Why You Won’t Remember It (And What Actually Matters)',
-    p2: 'By law, your notario must read your entire escritura to you before you sign. Here’s why you won’t retain most of it — and why that’s completely normal — and what you should actually do before closing day.',
-    btn2: 'Read article →',
-    h3: 'Buying Property in Mexico Through Your LLC or Corporation: What Your Accountant Won’t Tell You',
-    p3: 'Your accountant told you to buy through your LLC or corporation. It sounds logical—deduct trips, depreciate the property, keep money working inside the company. But FAPI rules in Canada, Revenue Ruling 2013-14 in the United States, and dividend withholding in Mexico can turn that "tax strategy" into a mistake worth thousands of dollars. Here’s when it actually makes sense and when it doesn’t.',
-    btn3: 'Read article →'
+    hero: 'Perspectives <span style="color:#c9a84c">juridiques</span> pour expatriés',
+    heroSub: 'Conseils pratiques sur l\'immobilier, le fidéicommis, l\'immigration et plus encore — forts de plus de 20 ans d\'expérience à Puerto Vallarta et dans la Riviera Nayarit.',
+    tag: 'Immobilier', tag5: 'Planification successorale', meta: 'Avril 2026 · Rolando Romero García', meta3: '26 mai 2026 · Rolando Romero García', meta4: 'Juin 2026 · Rolando Romero García', meta5: 'Juin 2026 · Rolando Romero García',
+    h5: 'Bénéficiaire substitut du fidéicommis : pourquoi il importe plus qu\'il n\'y paraît',
+    p5: 'Vous avez rédigé votre testament en pensant qu\'il couvrait tout votre patrimoine, y compris la maison de la côte. Il ne le couvre pas : ce bien est régi par votre fidéicommis, et non par votre testament, à travers une figure que presque personne ne révise — le bénéficiaire substitut du fidéicommis. Ce guide explique pourquoi il importe plus qu\'il n\'y paraît.',
+    btn5: 'Lire l\'article →',
+    h4: 'Votre père ou votre mère est décédé et avait une propriété sur la côte du Mexique : ce que vous devez savoir en premier',
+    p4: 'Lorsque le titulaire d\'une propriété côtière en fidéicommis décède, la famille a souvent le sentiment qu\'elle doit agir tout de suite. Ce n\'est pas le cas. Ce guide explique quoi faire, dans quel ordre, et pourquoi la plupart des démarches se règlent à distance, sans voyager au Mexique.',
+    btn4: 'Lire l\'article →',
+    h1: 'Acheter en préconstruction à Vallarta : ce que le contrat ne protégera pas (et ce qui vous protégera vraiment)',
+    p1: 'Le contrat de préconstruction ne se négocie pas, le promoteur ne changera pas une virgule, et la NOM-247 ne vous protège que sur le papier. Voici où se trouve réellement la protection — et les six points qui valent la peine d\'être vérifiés avant de signer.',
+    btn1: 'Lire l\'article →',
+    h2: 'Lecture de l\'escritura à la clôture au Mexique : pourquoi vous ne vous en souviendrez pas (et ce qui compte vraiment)',
+    p2: 'Par la loi, le Notario Público doit vous lire l\'intégralité de votre escritura avant que vous ne signiez. Voici pourquoi vous n\'en retiendrez presque rien — et pourquoi c\'est tout à fait normal — et ce que vous devriez vraiment vérifier avant le jour de la clôture.',
+    btn2: 'Lire l\'article →',
+    h3: 'Acheter au Mexique via votre LLC ou Société : Ce que votre comptable ne vous dira pas (et ce qui pourrait vous coûter des milliers)',
+    p3: 'Votre comptable vous a dit d\'acheter via votre LLC ou société. Cela semble logique — déduire les voyages, amortir le bien, garder l\'argent au travail dans l\'entreprise. Mais les règles FAPI au Canada, le Revenue Ruling 2013-14 aux États-Unis et la retenue sur dividendes au Mexique peuvent transformer cette « stratégie fiscale » en une erreur de milliers de dollars. Voici quand cela a vraiment du sens et quand cela n\'en a pas.',
+    btn3: 'Lire l\'article →'
   }
 };
 function setLang(lang) {
